@@ -174,7 +174,7 @@
                 <div class="col-md-5 text-md-end">
                     <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/6285357617815" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/6295758769683" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>

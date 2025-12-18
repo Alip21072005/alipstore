@@ -84,56 +84,59 @@ if ($_SESSION['status_login'] != true) {
                     </form>
                     <?php
                     if (isset($_POST['submit'])) {
-                        // print_r($_FILES['gambar']);
+    // 1. Menampung input dari form
+    $kategori   = $_POST['kategori'];
+    $nama       = $_POST['nama'];
+    $harga      = $_POST['harga'];
+    $deskripsi  = $_POST['deskripsi'];
+    $status     = $_POST['status'];
 
-                        // menampung input dari form
-                        $kategori   = $_POST['kategori'];
-                        $nama       = $_POST['nama'];
-                        $harga      = $_POST['harga'];
-                        $deskripsi  = $_POST['deskripsi'];
-                        $status   = $_POST['status'];
+    // 2. Menampung data file
+    $filename   = $_FILES['gambar']['name'];
+    $tmp_name   = $_FILES['gambar']['tmp_name'];
 
-                        // menampung data file yang di upload
-                        $filename   = $_FILES['gambar']['name'];
-                        $tmp_name   = $_FILES['gambar']['tmp_name'];
+    // Ambil ekstensi file dengan cara yang lebih aman
+    $type2      = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
-                        $type1       = explode('.', $filename);
-                        $type2       = $type1[1];
+    // Membuat nama file baru yang unik
+    $newname    = 'produk' . time() . '.' . $type2;
 
-                        $newname    = 'produk' . time() . '.' . $type2;
+    // Format file yang diizinkan
+    $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
 
-                        // menampung data format file yang diizinkan
-                        $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
+    // 3. Validasi format file
+    if (!in_array($type2, $tipe_diizinkan)) {
+        echo '<script>alert("Format file tidak diizinkan")</script>';
+    } else {
+        // Cek apakah folder "image" ada, jika tidak buat foldernya
+        if (!is_dir('image')) {
+            mkdir('image');
+        }
 
-                        // validasi format file
-                        if (!in_array($type2, $tipe_diizinkan)) {
-                            // jika format file tidak ada di dalam tipe diizinkan
-                            echo '<script>alert("Format file tidak diizinkan"></script>';
-                        } else {
-                            //jika format file sesuai dengan yang ada di dalam array tipe diizinkan
+        // 4. Proses upload file ke folder
+        if (move_uploaded_file($tmp_name, './image/' . $newname)) {
+            
+            // 5. Insert ke database jika upload berhasil
+            $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                '".$kategori."',
+                '".$nama."',
+                '".$harga."',
+                '".$deskripsi."',
+                '".$newname."',
+                '".$status."'
+            )");
 
-                            // proses upload file sekaligus insert ke database
-                            move_uploaded_file($tmp_name, './image/' . $newname);
-                            $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
-                                    '".$kategori."',
-                                    '".$nama."',
-                                    '".$harga."',
-                                    '".$deskripsi."',
-                                    '".$newname."',
-                                    '".$status."'
-                                )");
-
-                            if ($insert) {
-                                echo '<script>alert("Tambah Data Berhasil") </script>';
-                                echo '<script>window.location="produk.php" </script>';
-                            } else {
-                                echo 'Gagal' . mysqli_error($conn);
-                            }
-                        }
-
-                        // proses upload file sekaligus insert ke database
-
-                    }
+            if ($insert) {
+                echo '<script>alert("Tambah Data Berhasil") </script>';
+                echo '<script>window.location="produk.php" </script>';
+            } else {
+                echo 'Gagal database: ' . mysqli_error($conn);
+            }
+        } else {
+            echo '<script>alert("Gagal mengunggah file ke folder tujuan")</script>';
+        }
+    }
+}
                     ?>
 
                 </div>

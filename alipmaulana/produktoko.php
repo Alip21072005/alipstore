@@ -118,7 +118,7 @@
                             <?php echo (strlen($row['deskripsi']) > 80) ? substr($row['deskripsi'], 0, 80) . '...' : $row['deskripsi']; ?>
                         </p>
                         <p class="harga mb-3">Rp <?php echo number_format($row['harga'], 0, ',', '.') ?></p>
-                        <a href="https://wa.me/6285357617815?text=Halo%20Admin%20Kedai%20Kito,%20saya%20mau%20pesan%20<?php echo urlencode($row['namaproduk']) ?>"
+                        <a href="https://wa.me/6285758769683?text=Halo%20Admin%20Kedai%20Kito,%20saya%20mau%20pesan%20<?php echo urlencode($row['namaproduk']) ?>"
                             target="_blank" class="btn btn-beli w-100 py-2">
                             <i class="bi bi-whatsapp me-2"></i>Pesan Sekarang
                         </a>
@@ -147,7 +147,7 @@
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold small">Kontak Kami</h5>
                     <p class="small"><i class="bi bi-geo-alt-fill me-2"></i> Jakarta, Indonesia</p>
-                    <p class="small"><i class="bi bi-whatsapp me-2"></i> +62 853-5761-7815</p>
+                    <p class="small"><i class="bi bi-whatsapp me-2"></i> +62 857-5876-9683</p>
                 </div>
             </div>
             <hr class="mb-4 bg-white">
@@ -159,7 +159,7 @@
                 <div class="col-md-5 text-md-end">
                     <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/6285357617815" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/6285758769683" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
