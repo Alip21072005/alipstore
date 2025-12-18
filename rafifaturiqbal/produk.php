@@ -1,5 +1,4 @@
 <?php
-include "koneksi.php";
 session_start();
 include "koneksi.php";
 
@@ -84,8 +83,19 @@ if ($_SESSION['status_login'] != true) {
                                 <td><?php echo $row['namaproduk'] ?></td>
                                 <td><?php echo $row['harga'] ?></td>
                                 <td><?php echo $row['deskripsi'] ?></td>
-                                <td><img src="image/<?php echo $row['gambar'] ?>" width=" 70px"></td>
-                                <td><?php echo $row['status'] ?></td>
+                                <td>
+                                    <a href="image/<?php echo $row['gambar'] ?>" target="_blank">
+                                        <img src="image/<?php echo $row['gambar'] ?>">
+                                    </a>
+                                </td>
+                                <td>
+                                    <?php if($row['status'] == 1): ?>
+                                    <span>Aktif</span>
+                                    <?php else: ?>
+                                    <span>Tidak
+                                        Aktif</span>
+                                    <?php endif; ?>
+                                </td>
 
                                 <td>
                                     <a href="edit_produk.php?id=<?php echo $row['idproduk'] ?>">Edit</a> |
