@@ -125,8 +125,8 @@ while($row = mysqli_fetch_assoc($query)){
 
             <div class="col" data-aos="fade-up" data-aos-delay="50">
                 <div class="card card-toko h-100 p-4" style="border: 2px solid var(--nada-color);">
-                    <span class="visit-count" style="color: var(--nada-color); background: rgba(13, 148, 136, 0.1);">
-                        <i class="bi bi-eye-fill me-1"></i>
+                    <span class="visit-count" ">
+                        <i class=" bi bi-eye-fill me-1"></i>
                         <?php echo number_format($stats['nada'] ?? 0); ?>
                     </span>
                     <div class="text-center mt-3">
