@@ -78,7 +78,7 @@
                                 <h5 class="fw-bold mb-1"><?php echo $p['namaproduk']; ?></h5>
                                 <p class="text-muted small mb-3"><?php echo $p['deskripsi']; ?></p>
                                 <div class="d-grid">
-                                    <a href="https://wa.me/6285357617815?text=Halo%20Kedai%20Kito,%20saya%20ingin%20pesan%20<?php echo urlencode($p['namaproduk']); ?>" 
+                                    <a href="https://wa.me/6282281407734?text=Halo%20Kedai%20Kito,%20saya%20ingin%20pesan%20<?php echo urlencode($p['namaproduk']); ?>" 
                                        target="_blank" class="btn btn-wa">
                                         <i class="fab fa-whatsapp me-2"></i> Pesan
                                     </a>

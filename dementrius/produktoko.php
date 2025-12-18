@@ -90,7 +90,7 @@ include "koneksi.php";
                                     <td class="price-tag">Rp <?php echo number_format($row['harga'], 0, ',', '.') ?></td>
                                     <td class="text-muted small"><?php echo (strlen($row['deskripsi']) > 50) ? substr($row['deskripsi'], 0, 50) . '...' : $row['deskripsi']; ?></td>
                                     <td class="text-center">
-                                        <a href="https://wa.me/6285357617815?text=Halo, saya ingin membeli produk <?php echo $row['namaproduk'] ?>" target="_blank" class="btn btn-wa btn-sm px-3">
+                                        <a href="https://wa.me/6282281407734?text=Halo, saya ingin membeli produk <?php echo $row['namaproduk'] ?>" target="_blank" class="btn btn-wa btn-sm px-3">
                                             <i class="fab fa-whatsapp me-1"></i> Beli
                                         </a>
                                     </td>

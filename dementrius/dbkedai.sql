@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2025 at 12:41 PM
+-- Generation Time: Dec 18, 2025 at 02:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`idadmin`, `namaadmin`, `username`, `password`, `telpon`, `admin_email`) VALUES
-(1, '', 'admin', '0192023a7bbd73250516f069df18b500', '', '');
+(1, '', 'demen', 'c1a7bccf14ae5a44ac365691d76f7285', '', '');
 
 -- --------------------------------------------------------
 
