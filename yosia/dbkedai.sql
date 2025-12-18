@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Struktur dari tabel `kategori`
 --
 
+
 CREATE TABLE `kategori` (
   `idkategori` int(3) NOT NULL,
   `namakategori` varchar(20) NOT NULL
