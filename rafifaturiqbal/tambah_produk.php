@@ -114,15 +114,14 @@ if ($_SESSION['status_login'] != true) {
 
                             // proses upload file sekaligus insert ke database
                             move_uploaded_file($tmp_name, './image/' . $newname);
-                            $insert = mysqli_query($conn, "INSERT INTO produk VALUES (
-                                    null,
-                                    '" . $kategori . "',
-                                    '" . $nama . "',
-                                    '" . $harga . "',
-                                    '" . $deskripsi . "',
-                                    '" . $newname . "',
-                                    '" . $status . "',
-                                    null) ");
+                            $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                                    '".$kategori."',
+                                    '".$nama."',
+                                    '".$harga."',
+                                    '".$deskripsi."',
+                                    '".$newname."',
+                                    '".$status."'
+                                )");
 
                             if ($insert) {
                                 echo '<script>alert("Tambah Data Berhasil") </script>';
