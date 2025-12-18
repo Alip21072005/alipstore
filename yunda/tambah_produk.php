@@ -2,7 +2,7 @@
     session_start();
     include "koneksi.php";
 
-    // Proteksi halaman
+    // Proteksi halaman agar hanya yang sudah login bisa masuk
     if ($_SESSION['status_login'] != true) {
         echo '<script>window.location="login.php"</script>';
     }
@@ -13,35 +13,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tambah Produk | Nada Admin</title>
+    <title>Tambah Menu Baru | Yunda Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
     <style>
-    /* Admin Design System - Nada */
+    /* Admin Design System - Yunda (Pink & Modern) */
     html,
     body {
         height: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        background-color: #f9fafb;
+        background-color: #fffafb;
     }
 
     .navbar {
-        background-color: #111827 !important;
-        padding: 0.8rem 0;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%) !important;
+        padding: 1rem 0;
+        border-bottom: 4px solid #ffb3c1;
     }
 
     .navbar-brand {
         font-weight: 800;
         letter-spacing: 1.5px;
-        color: #0d9488 !important;
+        color: #ffffff !important;
     }
 
     .section {
@@ -49,55 +51,88 @@
         padding: 40px 0;
     }
 
-    /* Form Styling */
+    /* Form & Card Styling */
     .card-form {
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ffe5ec;
+        border-radius: 25px;
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.05);
         background: white;
     }
 
     .form-label {
-        font-weight: 600;
-        color: #374151;
-        font-size: 0.85rem;
+        font-weight: 700;
+        color: #590d22;
+        font-size: 0.8rem;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 8px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
     }
 
     .form-control,
     .form-select {
-        padding: 12px 15px;
-        border-radius: 12px;
-        border: 1px solid #e5e7eb;
+        padding: 12px 18px;
+        border-radius: 15px;
+        border: 1.5px solid #ffe5ec;
+        background-color: #fffcfd;
+        transition: all 0.3s;
     }
 
     .form-control:focus,
     .form-select:focus {
-        border-color: #0d9488;
-        box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+        border-color: #ff85a2;
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(255, 133, 162, 0.15);
+    }
+
+    .input-group-text {
+        background-color: #fff0f3;
+        border: 1.5px solid #ffe5ec;
+        color: #ff4d6d;
+        border-radius: 15px 0 0 15px;
+        font-weight: 700;
     }
 
     .btn-save {
-        background-color: #0d9488;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         color: white;
-        padding: 12px 30px;
-        border-radius: 12px;
+        padding: 15px 30px;
+        border-radius: 15px;
         font-weight: 700;
+        border: none;
+        transition: 0.4s;
+    }
+
+    .btn-save:hover {
+        background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 77, 109, 0.2);
+        color: white;
+    }
+
+    .btn-cancel {
+        padding: 12px 25px;
+        border-radius: 15px;
+        font-weight: 700;
+        color: #ff758f;
+        background-color: #fff0f3;
         border: none;
         transition: 0.3s;
     }
 
-    .btn-save:hover {
-        background-color: #0f766e;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+    .btn-cancel:hover {
+        background-color: #ffe5ec;
+        color: #ff4d6d;
+    }
+
+    .section-title {
+        color: #590d22;
+        font-weight: 800;
     }
 
     footer {
         background: #fff;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #ffe5ec;
+        color: #ff758f;
     }
     </style>
 </head>
@@ -106,7 +141,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.php">NADA ADMIN</a>
+                <a class="navbar-brand" href="dashboard.php"><i class="bi bi-heart-fill me-2"></i>YUNDA ADMIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -114,9 +149,11 @@
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="kategori.php">Kategori</a></li>
-                        <li class="nav-item"><a class="nav-link active text-white" href="produk.php">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-white" href="produk.php">Produk</a>
+                        </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-danger btn-sm px-4 rounded-pill" href="keluar.php">Logout</a>
+                            <a class="btn btn-light btn-sm px-4 rounded-pill text-danger fw-bold shadow-sm"
+                                href="keluar.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -126,10 +163,10 @@
 
     <div class="section">
         <div class="container">
-            <div class="row align-items-center mb-4">
+            <div class="row align-items-center mb-5">
                 <div class="col">
-                    <h3 class="fw-bold mb-0 text-dark">Tambah Produk Baru</h3>
-                    <p class="text-muted small">Lengkapi informasi di bawah untuk menambahkan item ke toko</p>
+                    <h2 class="section-title mb-0">Tambah Produk Cantik ✨</h2>
+                    <p class="text-muted">Tambahkan menu spesial terbaru ke dalam katalog tokomu.</p>
                 </div>
             </div>
 
@@ -141,7 +178,7 @@
                                 <div class="mb-4">
                                     <label class="form-label">Nama Produk</label>
                                     <input type="text" name="nama" class="form-control"
-                                        placeholder="Contoh: Kopi Susu Gula Aren" required>
+                                        placeholder="Contoh: Strawberry Milkshake Special" required>
                                 </div>
 
                                 <div class="mb-4">
@@ -173,33 +210,35 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Harga Satuan (Rp)</label>
+                                    <label class="form-label">Harga Menu</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light">Rp</span>
-                                        <input type="number" name="harga" class="form-control" placeholder="0" required>
+                                        <span class="input-group-text">Rp</span>
+                                        <input type="number" name="harga" class="form-control border-start-0"
+                                            placeholder="0" required>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Unggah Foto Produk</label>
+                                    <label class="form-label">Foto Produk</label>
                                     <input type="file" name="gambar" class="form-control" required>
-                                    <div class="form-text small mt-2">Format: JPG, PNG, GIF (Maks. 2MB)</div>
+                                    <div class="form-text small mt-2 text-pink" style="color: #ff758f;">
+                                        <i class="bi bi-info-circle me-1"></i> Gunakan foto yang cerah & menarik.
+                                    </div>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Status Visibilitas</label>
+                                    <label class="form-label">Status Menu</label>
                                     <select class="form-select" name="status" required>
-                                        <option value="1">Aktif (Tampilkan)</option>
-                                        <option value="0">Draft (Sembunyikan)</option>
+                                        <option value="1">Tampilkan Sekarang</option>
+                                        <option value="0">Simpan sebagai Draft</option>
                                     </select>
                                 </div>
 
-                                <div class="d-grid gap-2 mt-4">
-                                    <button type="submit" name="submit" class="btn btn-save">
-                                        <i class="bi bi-cloud-upload me-2"></i>Simpan Produk
+                                <div class="d-grid gap-3 mt-4">
+                                    <button type="submit" name="submit" class="btn btn-save shadow-sm">
+                                        <i class="bi bi-stars me-2"></i>Simpan Menu Baru
                                     </button>
-                                    <a href="produk.php"
-                                        class="btn btn-light border py-2 rounded-3 fw-semibold">Batal</a>
+                                    <a href="produk.php" class="btn btn-cancel text-center">Batal</a>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +262,7 @@
                 $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
 
                 if (!in_array($type2, $tipe_diizinkan)) {
-                    echo '<div class="alert alert-danger mt-3">Format file tidak diizinkan!</div>';
+                    echo '<div class="alert alert-danger mt-3 rounded-4 border-0 shadow-sm" style="background-color: #fff0f3; color: #ff4d6d;">Format file tidak diizinkan!</div>';
                 } else {
                     if (!is_dir('image')) { mkdir('image'); }
 
@@ -233,12 +272,12 @@
                         )");
 
                         if ($insert) {
-                            echo '<script>alert("Produk berhasil ditambahkan!"); window.location="produk.php";</script>';
+                            echo '<script>alert("Yay! Menu baru berhasil ditambahkan 💖"); window.location="produk.php";</script>';
                         } else {
-                            echo '<div class="alert alert-danger">Kesalahan Database: '.mysqli_error($conn).'</div>';
+                            echo '<div class="alert alert-danger mt-3">Kesalahan Database: '.mysqli_error($conn).'</div>';
                         }
                     } else {
-                        echo '<div class="alert alert-danger">Gagal mengunggah file gambar!</div>';
+                        echo '<div class="alert alert-danger mt-3">Gagal mengunggah foto!</div>';
                     }
                 }
             }
@@ -248,7 +287,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Admin Panel</strong></small>
+            <small>Copyright &copy; 2025 — <strong>Yunda Management System</strong> 💖</small>
         </div>
     </footer>
 

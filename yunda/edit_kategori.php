@@ -20,34 +20,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Kategori | Nada Admin</title>
+    <title>Edit Kategori | Yunda Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-    /* Admin Design System - Nada */
+    /* Admin Design System - Yunda (Pink & White Theme) */
     html,
     body {
         height: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        background-color: #f9fafb;
+        background-color: #fffafb;
     }
 
     .navbar {
-        background-color: #111827 !important;
-        padding: 0.8rem 0;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%) !important;
+        padding: 1rem 0;
+        border-bottom: 4px solid #ffb3c1;
     }
 
     .navbar-brand {
         font-weight: 800;
         letter-spacing: 1.5px;
-        color: #0d9488 !important;
+        color: #ffffff !important;
     }
 
     .section {
@@ -57,56 +59,84 @@
 
     /* Card & Form Styling */
     .card-form {
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ffe5ec;
+        border-radius: 25px;
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.05);
         background: white;
+        overflow: hidden;
     }
 
     .form-label {
-        font-weight: 600;
-        color: #374151;
-        font-size: 0.9rem;
+        font-weight: 700;
+        color: #590d22;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
     }
 
     .form-control {
-        padding: 12px 15px;
-        border-radius: 12px;
-        border: 1px solid #e5e7eb;
+        padding: 14px 18px;
+        border-radius: 15px;
+        border: 1.5px solid #ffe5ec;
         transition: all 0.3s;
+        background-color: #fffcfd;
     }
 
     .form-control:focus {
-        border-color: #0d9488;
-        box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+        border-color: #ff85a2;
+        box-shadow: 0 0 0 4px rgba(255, 133, 162, 0.15);
+        background-color: #fff;
     }
 
+    .input-group-text {
+        border-radius: 15px 0 0 15px !important;
+        background-color: #fff0f3 !important;
+        border: 1.5px solid #ffe5ec;
+        border-right: none;
+        color: #ff4d6d;
+    }
+
+    .form-control.rounded-end-3 {
+        border-radius: 0 15px 15px 0 !important;
+    }
+
+    /* Button Styling */
     .btn-update {
-        background-color: #0d9488;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         color: white;
         border: none;
-        padding: 12px 30px;
-        border-radius: 12px;
-        font-weight: 700;
+        padding: 14px 35px;
+        border-radius: 15px;
+        font-weight: 800;
         transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .btn-update:hover {
-        background-color: #0f766e;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+        background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
         color: white;
     }
 
     .btn-cancel {
-        padding: 12px 30px;
-        border-radius: 12px;
+        padding: 14px 30px;
+        border-radius: 15px;
         font-weight: 600;
+        color: #6c757d;
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+    }
+
+    .btn-cancel:hover {
+        background-color: #e9ecef;
+        color: #343a40;
     }
 
     footer {
         background: #fff;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #ffe5ec;
+        color: #ff4d6d;
     }
     </style>
 </head>
@@ -115,7 +145,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.php">NADA ADMIN</a>
+                <a class="navbar-brand" href="dashboard.php"><i class="bi bi-shield-lock-fill me-2"></i>YUNDA ADMIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -125,7 +155,8 @@
                         <li class="nav-item"><a class="nav-link active text-white" href="kategori.php">Kategori</a></li>
                         <li class="nav-item"><a class="nav-link" href="produk.php">Produk</a></li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-danger btn-sm px-4 rounded-pill" href="keluar.php">Logout</a>
+                            <a class="btn btn-light btn-sm px-4 rounded-pill text-danger fw-bold"
+                                href="keluar.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -138,31 +169,35 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center mb-4">
-                        <h3 class="fw-bold text-dark text-uppercase">Perbarui Kategori</h3>
-                        <p class="text-muted small">Anda sedang mengedit kategori:
-                            <strong><?php echo $k->namakategori ?></strong></p>
+                        <h3 class="fw-800" style="color: #590d22;">PERBARUI KATEGORI</h3>
+                        <p class="text-muted small">Mengedit informasi kategori:
+                            <span
+                                class="badge bg-soft-pink px-2 py-1 text-danger border border-danger-subtle"><?php echo $k->namakategori ?></span>
+                        </p>
                     </div>
 
                     <div class="card card-form p-4">
                         <div class="card-body">
                             <form action="" method="POST">
                                 <div class="mb-4">
-                                    <label for="kategori" class="form-label">Nama Kategori</label>
+                                    <label for="kategori" class="form-label">Nama Kategori Baru</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light border-end-0 rounded-start-3">
-                                            <i class="bi bi-pencil-square text-muted"></i>
+                                        <span class="input-group-text">
+                                            <i class="bi bi-tag-fill"></i>
                                         </span>
-                                        <input type="text" class="form-control border-start-0 rounded-end-3"
-                                            name="kategori" value="<?php echo $k->namakategori ?>" required autofocus>
+                                        <input type="text" class="form-control rounded-end-3" name="kategori"
+                                            value="<?php echo $k->namakategori ?>" required autofocus>
                                     </div>
-                                    <div class="form-text mt-2 small">Perubahan nama akan langsung berdampak pada
-                                        pengelompokan produk terkait.</div>
+                                    <div class="form-text mt-3 small text-muted">
+                                        <i class="bi bi-info-circle me-1"></i> Perubahan nama kategori akan diperbarui
+                                        di seluruh daftar produk.
+                                    </div>
                                 </div>
 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
-                                    <a href="kategori.php" class="btn btn-light btn-cancel me-md-2">Batal</a>
+                                    <a href="kategori.php" class="btn btn-cancel me-md-2">Batal</a>
                                     <button type="submit" name="submit" class="btn btn-update">
-                                        <i class="bi bi-save me-2"></i>Update Kategori
+                                        <i class="bi bi-check2-circle me-2"></i>Simpan Perubahan
                                     </button>
                                 </div>
                             </form>
@@ -177,7 +212,7 @@
                                 if ($update) {
                                     echo '<script>alert("Kategori berhasil diperbarui!"); window.location="kategori.php";</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger mt-3 small">Gagal: ' . mysqli_error($conn) . '</div>';
+                                    echo '<div class="alert alert-danger mt-3 rounded-4 small">Gagal: ' . mysqli_error($conn) . '</div>';
                                 }
                             }
                             ?>
@@ -190,7 +225,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Management Panel</strong></small>
+            <small>Copyright &copy; 2025 — <strong>Yunda Management Panel</strong></small>
         </div>
     </footer>
 

@@ -13,34 +13,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tambah Kategori | Nada Admin</title>
+    <title>Tambah Kategori | Yunda Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-    /* Admin Design System - Nada */
+    /* Admin Design System - Yunda (Pink & Soft) */
     html,
     body {
         height: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        background-color: #f9fafb;
+        background-color: #fffafb;
     }
 
     .navbar {
-        background-color: #111827 !important;
-        padding: 0.8rem 0;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%) !important;
+        padding: 1rem 0;
+        border-bottom: 4px solid #ffb3c1;
     }
 
     .navbar-brand {
         font-weight: 800;
         letter-spacing: 1.5px;
-        color: #0d9488 !important;
+        color: #ffffff !important;
     }
 
     .section {
@@ -50,56 +52,91 @@
 
     /* Card & Form Styling */
     .card-form {
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ffe5ec;
+        border-radius: 30px;
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.08);
         background: white;
+        overflow: hidden;
     }
 
     .form-label {
-        font-weight: 600;
-        color: #374151;
-        font-size: 0.9rem;
+        font-weight: 700;
+        color: #590d22;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .form-control {
-        padding: 12px 15px;
-        border-radius: 12px;
-        border: 1px solid #e5e7eb;
+        padding: 14px 18px;
+        border-radius: 15px;
+        border: 1.5px solid #ffe5ec;
+        background-color: #fffcfd;
         transition: all 0.3s;
     }
 
     .form-control:focus {
-        border-color: #0d9488;
-        box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+        border-color: #ff85a2;
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(255, 133, 162, 0.15);
+    }
+
+    .input-group-text {
+        background-color: #fff0f3;
+        border: 1.5px solid #ffe5ec;
+        color: #ff4d6d;
+        border-radius: 15px 0 0 15px;
     }
 
     .btn-save {
-        background-color: #0d9488;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         color: white;
         border: none;
-        padding: 12px 30px;
-        border-radius: 12px;
+        padding: 14px 35px;
+        border-radius: 15px;
         font-weight: 700;
-        transition: 0.3s;
+        transition: 0.4s;
     }
 
     .btn-save:hover {
-        background-color: #0f766e;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+        background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 77, 109, 0.25);
         color: white;
     }
 
     .btn-cancel {
-        padding: 12px 30px;
-        border-radius: 12px;
-        font-weight: 600;
+        padding: 14px 30px;
+        border-radius: 15px;
+        font-weight: 700;
+        color: #ff758f;
+        background-color: #fff0f3;
+        border: none;
+        transition: 0.3s;
+    }
+
+    .btn-cancel:hover {
+        background-color: #ffe5ec;
+        color: #ff4d6d;
+    }
+
+    .icon-header {
+        width: 50px;
+        height: 50px;
+        background: #fff0f3;
+        color: #ff4d6d;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.5rem;
     }
 
     footer {
         background: #fff;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #ffe5ec;
+        color: #ff758f;
     }
     </style>
 </head>
@@ -108,17 +145,19 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.php">NADA ADMIN</a>
+                <a class="navbar-brand" href="dashboard.php"><i class="bi bi-heart-fill me-2"></i>YUNDA ADMIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link active text-white" href="kategori.php">Kategori</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-white"
+                                href="kategori.php">Kategori</a></li>
                         <li class="nav-item"><a class="nav-link" href="produk.php">Produk</a></li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-danger btn-sm px-4 rounded-pill" href="keluar.php">Logout</a>
+                            <a class="btn btn-light btn-sm px-4 rounded-pill text-danger fw-bold shadow-sm"
+                                href="keluar.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -130,9 +169,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="text-center mb-4">
-                        <h3 class="fw-bold text-dark">Tambah Kategori Baru</h3>
-                        <p class="text-muted">Buat kategori baru untuk mengelompokkan produk Anda</p>
+                    <div class="text-center mb-5">
+                        <div class="icon-header shadow-sm">
+                            <i class="bi bi-grid-plus-fill"></i>
+                        </div>
+                        <h2 class="fw-800" style="color: #590d22;">Buat Kategori Baru</h2>
+                        <p class="text-muted">Kelompokkan menu cantikmu agar lebih rapi ✨</p>
                     </div>
 
                     <div class="card card-form p-4">
@@ -141,20 +183,23 @@
                                 <div class="mb-4">
                                     <label for="kategori" class="form-label">Nama Kategori</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light border-end-0 rounded-start-3">
-                                            <i class="bi bi-tag text-muted"></i>
+                                        <span class="input-group-text">
+                                            <i class="bi bi-bookmark-heart"></i>
                                         </span>
-                                        <input type="text" class="form-control border-start-0 rounded-end-3"
-                                            name="kategori" id="kategori"
-                                            placeholder="Misal: Minuman Dingin, Snack, dll" required autofocus>
+                                        <input type="text" class="form-control border-start-0" name="kategori"
+                                            id="kategori" placeholder="Misal: Minuman Segar, Dessert, dll" required
+                                            autofocus>
                                     </div>
-                                    <div class="form-text mt-2 small">Gunakan nama yang singkat dan deskriptif.</div>
+                                    <div class="form-text mt-3 small italic" style="color: #ff758f;">
+                                        <i class="bi bi-info-circle me-1"></i> Nama ini akan muncul di daftar menu
+                                        pelanggan.
+                                    </div>
                                 </div>
 
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
-                                    <a href="kategori.php" class="btn btn-light btn-cancel me-md-2">Batal</a>
-                                    <button type="submit" name="submit" class="btn btn-save">
-                                        <i class="bi bi-check-circle me-2"></i>Simpan Kategori
+                                <div class="d-grid gap-3 d-md-flex justify-content-md-end mt-5">
+                                    <a href="kategori.php" class="btn btn-cancel">Batal</a>
+                                    <button type="submit" name="submit" class="btn btn-save shadow-sm">
+                                        <i class="bi bi-cloud-check-fill me-2"></i>Simpan Kategori
                                     </button>
                                 </div>
                             </form>
@@ -165,10 +210,12 @@
                                 $insert = mysqli_query($conn, "INSERT INTO kategori VALUES (null, '" . $nama . "') ");
                                 
                                 if ($insert) {
-                                    echo '<script>alert("Kategori berhasil ditambahkan!")</script>';
+                                    echo '<script>alert("Yay! Kategori baru berhasil ditambahkan 💖")</script>';
                                     echo '<script>window.location="kategori.php"</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger mt-3">Gagal: ' . mysqli_error($conn) . '</div>';
+                                    echo '<div class="alert alert-danger mt-4 rounded-4 border-0 shadow-sm" style="background-color: #fff0f3; color: #ff4d6d;">
+                                            <i class="bi bi-exclamation-triangle-fill me-2"></i> Gagal: ' . mysqli_error($conn) . '
+                                          </div>';
                                 }
                             }
                             ?>
@@ -181,7 +228,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Admin Panel</strong></small>
+            <small>Copyright &copy; 2025 — <strong>Yunda Management System</strong> 💖</small>
         </div>
     </footer>
 

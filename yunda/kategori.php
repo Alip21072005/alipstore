@@ -13,34 +13,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Kategori | Nada Admin</title>
+    <title>Data Kategori | Yunda Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-    /* Admin Design System - Nada */
+    /* Admin Design System - Yunda (Pink & White Theme) */
     html,
     body {
         height: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        background-color: #f9fafb;
+        background-color: #fffafb;
+        /* Background putih dengan hint pink sangat tipis */
     }
 
     .navbar {
-        background-color: #111827 !important;
-        padding: 0.8rem 0;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%) !important;
+        padding: 1rem 0;
+        border-bottom: 4px solid #ffb3c1;
     }
 
     .navbar-brand {
         font-weight: 800;
         letter-spacing: 1.5px;
-        color: #0d9488 !important;
+        color: #ffffff !important;
     }
 
     .section {
@@ -50,51 +53,78 @@
 
     /* Card & Table Styling */
     .card-custom {
-        border: none;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        border: 1px solid #ffe5ec;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(255, 77, 109, 0.05);
         overflow: hidden;
+        background: #ffffff;
     }
 
     .table thead th {
-        background-color: #f8fafc;
+        background-color: #fff0f3;
         text-transform: uppercase;
         font-size: 0.75rem;
         letter-spacing: 1px;
-        color: #64748b;
-        padding: 18px;
-        border-bottom: 2px solid #f1f5f9;
+        color: #c9184a;
+        padding: 20px;
+        border-bottom: none;
     }
 
     .table tbody td {
-        padding: 18px;
+        padding: 20px;
         vertical-align: middle;
+        border-bottom: 1px solid #fff0f3;
     }
 
     /* Button Styling */
     .btn-add {
-        background-color: #0d9488;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         border: none;
-        padding: 10px 24px;
-        border-radius: 10px;
-        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 12px;
+        font-weight: 700;
         transition: 0.3s;
+        color: white;
     }
 
     .btn-add:hover {
-        background-color: #0f766e;
-        box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+        background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
+        box-shadow: 0 8px 15px rgba(255, 77, 109, 0.3);
+        color: white;
+        transform: translateY(-2px);
     }
 
     .btn-action {
-        border-radius: 8px;
-        font-weight: 500;
-        padding: 5px 15px;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 6px 16px;
+        transition: 0.2s;
+    }
+
+    .btn-outline-warning {
+        color: #ffb703;
+        border-color: #ffb703;
+    }
+
+    .btn-outline-warning:hover {
+        background-color: #ffb703;
+        color: white;
     }
 
     footer {
-        background: #fff;
-        border-top: 1px solid #e5e7eb;
+        background: #ffffff;
+        border-top: 1px solid #ffe5ec;
+        color: #ff4d6d;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        opacity: 0.85;
+    }
+
+    .nav-link.active {
+        font-weight: 800 !important;
+        opacity: 1;
     }
     </style>
 </head>
@@ -103,17 +133,18 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.php">NADA ADMIN</a>
+                <a class="navbar-brand" href="dashboard.php"><i class="bi bi-shield-lock-fill me-2"></i>YUNDA ADMIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link active text-white" href="kategori.php">Kategori</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="kategori.php">Kategori</a></li>
                         <li class="nav-item"><a class="nav-link" href="produk.php">Produk</a></li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-danger btn-sm px-4 rounded-pill" href="keluar.php">Logout</a>
+                            <a class="btn btn-light btn-sm px-4 rounded-pill text-danger fw-bold"
+                                href="keluar.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -125,25 +156,25 @@
         <div class="container">
             <div class="row align-items-center mb-4">
                 <div class="col-md-6">
-                    <h3 class="fw-bold mb-0 text-dark">Manajemen Kategori</h3>
-                    <p class="text-muted small mb-0">Atur pengelompokan produk toko Anda</p>
+                    <h3 class="fw-extrabold mb-0" style="color: #590d22;">Manajemen Kategori</h3>
+                    <p class="text-muted small mb-0">Kelola kategori produk untuk <strong>Toko Yunda</strong></p>
                 </div>
                 <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                    <a class="btn btn-primary btn-add" href="tambah_kategori.php" role="button">
-                        <i class="bi bi-plus-lg me-2"></i>Tambah Kategori
+                    <a class="btn btn-add" href="tambah_kategori.php" role="button">
+                        <i class="bi bi-plus-circle-fill me-2"></i>Tambah Kategori Baru
                     </a>
                 </div>
             </div>
 
-            <div class="card card-custom shadow-sm mb-5">
+            <div class="card card-custom mb-5">
                 <div class="card-body p-0">
                     <div class="table-responsive">
                         <table class="table table-hover mb-0">
                             <thead>
                                 <tr>
-                                    <th width="100px" class="ps-4">ID / No</th>
-                                    <th>Nama Kategori</th>
-                                    <th width="250px" class="text-center pe-4">Aksi Kelola</th>
+                                    <th width="120px" class="ps-4 text-center">No.</th>
+                                    <th>Nama Kategori Produk</th>
+                                    <th width="300px" class="text-center pe-4">Opsi Pengaturan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -154,9 +185,13 @@
                                         while ($row = mysqli_fetch_array($kategori)) {
                                 ?>
                                 <tr>
-                                    <td class="ps-4 text-muted fw-medium"><?php echo $no++ ?></td>
+                                    <td class="ps-4 text-center">
+                                        <span
+                                            class="badge rounded-pill bg-light text-dark px-3 py-2 border"><?php echo $no++ ?></span>
+                                    </td>
                                     <td>
-                                        <span class="fw-bold text-dark"><?php echo $row['namakategori'] ?></span>
+                                        <span class="fw-bold"
+                                            style="color: #590d22; font-size: 1.05rem;"><?php echo $row['namakategori'] ?></span>
                                     </td>
                                     <td class="text-center pe-4">
                                         <a href="edit_kategori.php?id=<?php echo $row['idkategori'] ?>"
@@ -165,7 +200,7 @@
                                         </a>
                                         <a href="proses_hapus.php?idk=<?php echo $row['idkategori'] ?>"
                                             class="btn btn-sm btn-outline-danger btn-action"
-                                            onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
+                                            onclick="return confirm('Yakin ingin menghapus kategori <?php echo $row['namakategori'] ?>?')">
                                             <i class="bi bi-trash3 me-1"></i> Hapus
                                         </a>
                                     </td>
@@ -175,8 +210,8 @@
                                 <tr>
                                     <td colspan="3" class="text-center py-5">
                                         <div class="text-muted">
-                                            <i class="bi bi-folder2-open fs-1 d-block mb-2"></i>
-                                            Belum ada kategori yang ditambahkan.
+                                            <i class="bi bi-folder-x fs-1 d-block mb-3" style="color: #ffb3c1;"></i>
+                                            <p class="mb-0">Belum ada kategori yang ditambahkan.</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -189,9 +224,9 @@
         </div>
     </div>
 
-    <footer class="py-4">
+    <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Management Panel</strong></small>
+            <small>Copyright &copy; 2025 — <strong>Yunda Management Panel</strong></small>
         </div>
     </footer>
 

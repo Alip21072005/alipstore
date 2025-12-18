@@ -20,35 +20,37 @@ $p = mysqli_fetch_object($produk);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Produk | Nada Admin</title>
+    <title>Edit Produk | Yunda Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
     <style>
-    /* Admin Design System - Nada */
+    /* Admin Design System - Yunda (Pink & White) */
     html,
     body {
         height: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        background-color: #f9fafb;
+        background-color: #fffafb;
     }
 
     .navbar {
-        background-color: #111827 !important;
-        padding: 0.8rem 0;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%) !important;
+        padding: 1rem 0;
+        border-bottom: 4px solid #ffb3c1;
     }
 
     .navbar-brand {
         font-weight: 800;
         letter-spacing: 1.5px;
-        color: #0d9488 !important;
+        color: #ffffff !important;
     }
 
     .section {
@@ -56,61 +58,77 @@ $p = mysqli_fetch_object($produk);
         padding: 40px 0;
     }
 
+    /* Card & Form Styling */
     .card-form {
-        border: none;
+        border: 1px solid #ffe5ec;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(255, 77, 109, 0.05);
         background: white;
     }
 
     .form-label {
-        font-weight: 600;
-        color: #374151;
+        font-weight: 700;
+        color: #590d22;
         font-size: 0.85rem;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 8px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
     }
 
     .form-control,
     .form-select {
         padding: 12px 15px;
         border-radius: 12px;
-        border: 1px solid #e5e7eb;
+        border: 1.5px solid #ffe5ec;
+        background-color: #fffcfd;
     }
 
-    .form-control:focus {
-        border-color: #0d9488;
-        box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #ff85a2;
+        box-shadow: 0 0 0 4px rgba(255, 133, 162, 0.1);
+        background-color: #fff;
     }
 
     .current-img-container {
-        background: #f3f4f6;
+        background: #fff0f3;
         padding: 15px;
-        border-radius: 15px;
+        border-radius: 20px;
         text-align: center;
-        border: 2px dashed #d1d5db;
+        border: 2px dashed #ffb3c1;
     }
 
     .btn-update {
-        background-color: #0d9488;
+        background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         color: white;
-        padding: 12px 30px;
-        border-radius: 12px;
-        font-weight: 700;
+        padding: 14px 30px;
+        border-radius: 15px;
+        font-weight: 800;
         border: none;
         transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .btn-update:hover {
-        background-color: #0f766e;
+        background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+        box-shadow: 0 8px 20px rgba(255, 77, 109, 0.2);
+        color: white;
+    }
+
+    .input-group-text {
+        background-color: #fff0f3;
+        border: 1.5px solid #ffe5ec;
+        color: #ff4d6d;
+        font-weight: 700;
+        border-radius: 12px 0 0 12px;
     }
 
     footer {
         background: #fff;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #ffe5ec;
+        color: #ff4d6d;
     }
     </style>
 </head>
@@ -119,7 +137,7 @@ $p = mysqli_fetch_object($produk);
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.php">NADA ADMIN</a>
+                <a class="navbar-brand" href="dashboard.php"><i class="bi bi-heart-fill me-2"></i>YUNDA ADMIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -127,9 +145,11 @@ $p = mysqli_fetch_object($produk);
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="kategori.php">Kategori</a></li>
-                        <li class="nav-item"><a class="nav-link active text-white" href="produk.php">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-white" href="produk.php">Produk</a>
+                        </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-danger btn-sm px-4 rounded-pill" href="keluar.php">Logout</a>
+                            <a class="btn btn-light btn-sm px-4 rounded-pill text-danger fw-bold"
+                                href="keluar.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -139,10 +159,12 @@ $p = mysqli_fetch_object($produk);
 
     <div class="section">
         <div class="container">
-            <div class="row align-items-center mb-4">
+            <div class="row align-items-center mb-4 text-center text-md-start">
                 <div class="col">
-                    <h3 class="fw-bold mb-0 text-dark">Edit Detail Produk</h3>
-                    <p class="text-muted small">ID Produk: #<?php echo $p->idproduk ?></p>
+                    <h2 class="fw-800" style="color: #590d22;">Edit Detail Produk</h2>
+                    <p class="text-muted">Kelola informasi item <span
+                            class="badge bg-soft-pink text-danger border border-danger-subtle">#PROD-<?php echo $p->idproduk ?></span>
+                    </p>
                 </div>
             </div>
 
@@ -154,11 +176,12 @@ $p = mysqli_fetch_object($produk);
                                 <div class="mb-4">
                                     <label class="form-label">Nama Produk</label>
                                     <input type="text" name="nama" class="form-control"
-                                        value="<?php echo $p->namaproduk ?>" required>
+                                        value="<?php echo $p->namaproduk ?>" placeholder="Contoh: Buket Bunga Mawar"
+                                        required>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Deskripsi Produk</label>
+                                    <label class="form-label">Deskripsi Lengkap</label>
                                     <textarea name="deskripsi"
                                         class="form-control"><?php echo $p->deskripsi ?></textarea>
                                     <script>
@@ -172,18 +195,20 @@ $p = mysqli_fetch_object($produk);
                     <div class="col-lg-4">
                         <div class="card card-form p-4 mb-4">
                             <div class="card-body">
-                                <div class="mb-4 text-center">
-                                    <label class="form-label d-block text-start">Foto Produk Saat Ini</label>
-                                    <div class="current-img-container mb-3">
-                                        <img src="image/<?php echo $p->gambar ?>" class="rounded" width="100%">
+                                <div class="mb-4">
+                                    <label class="form-label d-block">Media Produk</label>
+                                    <div class="current-img-container mb-3 shadow-sm">
+                                        <img src="image/<?php echo $p->gambar ?>" class="rounded-3" width="100%"
+                                            alt="Preview">
+                                        <div class="small text-muted mt-2">Foto saat ini</div>
                                     </div>
                                     <input type="hidden" name="foto_lama" value="<?php echo $p->gambar ?>">
                                     <input type="file" name="gambar" class="form-control">
-                                    <div class="form-text small mt-2">Biarkan kosong jika tidak ingin mengganti foto.
-                                    </div>
+                                    <div class="form-text small mt-2"><i class="bi bi-info-circle"></i> Biarkan kosong
+                                        jika foto tidak diganti.</div>
                                 </div>
 
-                                <hr class="my-4 opacity-50">
+                                <hr class="my-4 opacity-10">
 
                                 <div class="mb-4">
                                     <label class="form-label">Kategori</label>
@@ -201,19 +226,19 @@ $p = mysqli_fetch_object($produk);
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Harga Satuan (Rp)</label>
+                                    <label class="form-label">Harga Satuan</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light">Rp</span>
+                                        <span class="input-group-text">Rp</span>
                                         <input type="number" name="harga" class="form-control"
                                             value="<?php echo $p->harga ?>" required>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label">Status Produk</label>
+                                    <label class="form-label">Visibilitas</label>
                                     <select class="form-select" name="status">
                                         <option value="1" <?php echo ($p->status == 1) ? 'selected' : ''; ?>>Aktif
-                                            (Tampil)</option>
+                                            (Muncul di Web)</option>
                                         <option value="0" <?php echo ($p->status == 0) ? 'selected' : ''; ?>>Non-Aktif
                                             (Sembunyi)</option>
                                     </select>
@@ -221,10 +246,11 @@ $p = mysqli_fetch_object($produk);
 
                                 <div class="d-grid gap-2 mt-5">
                                     <button type="submit" name="submit" class="btn btn-update">
-                                        <i class="bi bi-check-circle me-2"></i>Simpan Perubahan
+                                        <i class="bi bi-cloud-arrow-up-fill me-2"></i>Simpan Perubahan
                                     </button>
                                     <a href="produk.php"
-                                        class="btn btn-light border py-2 rounded-3 fw-semibold">Kembali</a>
+                                        class="btn btn-light border py-2 rounded-3 fw-bold text-muted small">KEMBALI KE
+                                        DAFTAR</a>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +278,6 @@ $p = mysqli_fetch_object($produk);
                     if (!in_array($type2, $tipe_diizinkan)) {
                         echo '<script>alert("Format File tidak Diizinkan")</script>';
                     } else {
-                        // Hapus foto lama dari folder
                         if(file_exists('./image/' . $foto_lama)) {
                             unlink('./image/' . $foto_lama);
                         }
@@ -275,7 +300,7 @@ $p = mysqli_fetch_object($produk);
                 if ($update) {
                     echo '<script>alert("Perubahan berhasil disimpan!"); window.location="produk.php";</script>';
                 } else {
-                    echo '<div class="alert alert-danger">Gagal: ' . mysqli_error($conn) . '</div>';
+                    echo '<div class="alert alert-danger rounded-4 mt-3 small">Gagal: ' . mysqli_error($conn) . '</div>';
                 }
             }
             ?>
@@ -284,7 +309,7 @@ $p = mysqli_fetch_object($produk);
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Management Panel</strong></small>
+            <small>Copyright &copy; 2025 — <strong>Yunda Management Panel</strong></small>
         </div>
     </footer>
 
