@@ -85,7 +85,7 @@ if ($_SESSION['status_login'] != true) {
                                 <td><?php echo $row['deskripsi'] ?></td>
                                 <td>
                                     <a href="image/<?php echo $row['gambar'] ?>" target="_blank">
-                                        <img src="image/<?php echo $row['gambar'] ?>">
+                                        <img src="image/<?php echo $row['gambar'] ?>" class="img-product shadow-sm">
                                     </a>
                                 </td>
                                 <td>
