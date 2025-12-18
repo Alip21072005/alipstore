@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portal Project VPS | Alip Maulana</title>
+    <title>Toko Sistem Informasi | Hub Kelas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -12,7 +12,7 @@
     <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #f8f9fa;
+        background-color: #f4f7f6;
     }
 
     .navbar {
@@ -20,39 +20,40 @@
     }
 
     .hero-section {
-        background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(13, 110, 253, 0.85)), url('https://images.unsplash.com/photo-1522071823991-b9671f9d7f1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         background-size: cover;
         background-position: center;
         color: white;
-        padding: 80px 0;
-        margin-bottom: 50px;
+        padding: 60px 0;
+        margin-bottom: 40px;
     }
 
-    .card-project {
+    .card-toko {
         border: none;
-        border-radius: 15px;
-        overflow: hidden;
+        border-radius: 20px;
         transition: all 0.3s ease;
-        height: 100%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .card-project:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    .card-toko:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
     }
 
-    .icon-box {
-        font-size: 3rem;
-        color: #0d6efd;
-        margin-bottom: 20px;
+    .owner-badge {
+        font-size: 0.75rem;
+        background: #e9ecef;
+        color: #495057;
+        padding: 4px 12px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 10px;
     }
 
     .btn-visit {
-        border-radius: 10px;
+        border-radius: 12px;
         font-weight: 600;
-        transition: 0.3s;
     }
     </style>
 </head>
@@ -61,10 +62,11 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-cpu me-2"></i>Alip VPS Center</a>
+                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-grid-fill me-2"></i>Toko Sistem Informasi</a>
                 <div class="ms-auto">
-                    <a href="/phpmyadmin" target="_blank" class="btn btn-outline-light btn-sm"><i
-                            class="bi bi-database-fill-gear me-1"></i> Database Management</a>
+                    <a href="/phpmyadmin/" target="_blank" class="btn btn-light btn-sm fw-bold">
+                        <i class="bi bi-database-fill me-1"></i> Database Portal
+                    </a>
                 </div>
             </div>
         </nav>
@@ -72,64 +74,51 @@
 
     <div class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Selamat Datang di Portal VPS Saya</h1>
-            <p class="lead">Direktori Project Website & Sistem Informasi Sistem Informasi Dehasen</p>
+            <h1 class="display-5 fw-bold text-uppercase">Toko Sistem Informasi Anjay</h1>
+            <p class="lead">Kumpulan Project UMKM Digital Mahasiswa Sistem Informasi Dehasen</p>
         </div>
     </div>
 
     <div class="container mb-5">
-        <div class="text-center mb-5">
-            <h3 class="fw-bold">Daftar Website Tersedia</h3>
-            <hr class="mx-auto bg-primary" style="width: 100px; height: 3px;">
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
             <div class="col">
-                <div class="card card-project p-4 text-center">
-                    <div class="icon-box">
-                        <i class="bi bi-shop"></i>
+                <div class="card card-toko h-100 p-4">
+                    <div class="text-center mb-3">
+                        <div class="owner-badge">Owner: Alip Maulana</div>
+                        <h4 class="fw-bold mb-2">Kedai Kito Online</h4>
+                        <p class="text-muted small">Pusat jajanan lezat dengan cita rasa autentik khas Bengkulu.</p>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h4 class="card-title fw-bold">Kedai Kito Online</h4>
-                        <p class="card-text text-muted">Sistem informasi penjualan makanan dan minuman dengan pemesanan
-                            via WhatsApp.</p>
-                        <div class="mt-auto pt-3">
-                            <a href="alipmaulana/" class="btn btn-primary btn-visit w-100">
-                                Buka Website <i class="bi bi-box-arrow-up-right ms-2"></i>
-                            </a>
-                        </div>
+                    <div class="mt-auto">
+                        <a href="/alipmaulana/" class="btn btn-primary btn-visit w-100">
+                            Kunjungi Toko <i class="bi bi-arrow-right-short ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card card-project p-4 text-center">
-                    <div class="icon-box text-secondary">
-                        <i class="bi bi-plus-circle-dotted"></i>
+                <div class="card card-toko h-100 p-4 border-1 border-dashed">
+                    <div class="text-center mb-3">
+                        <div class="owner-badge text-primary bg-primary-subtle">Tersedia</div>
+                        <h4 class="fw-bold mb-2 text-muted">Toko Teman 1</h4>
+                        <p class="text-muted small">Project toko online mahasiswa berikutnya akan tampil di sini.</p>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h4 class="card-title fw-bold text-secondary">Project Kedua</h4>
-                        <p class="card-text text-muted">Tempat untuk project sistem informasi Anda selanjutnya di VPS
-                            ini.</p>
-                        <div class="mt-auto pt-3">
-                            <button class="btn btn-secondary btn-visit w-100" disabled>Coming Soon</button>
-                        </div>
+                    <div class="mt-auto">
+                        <button class="btn btn-outline-secondary btn-visit w-100" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card card-project p-4 text-center">
-                    <div class="icon-box text-success">
-                        <i class="bi bi-person-badge"></i>
+                <div class="card card-toko h-100 p-4 border-1 border-dashed">
+                    <div class="text-center mb-3">
+                        <div class="owner-badge text-primary bg-primary-subtle">Tersedia</div>
+                        <h4 class="fw-bold mb-2 text-muted">Toko Teman 2</h4>
+                        <p class="text-muted small">Project toko online mahasiswa berikutnya akan tampil di sini.</p>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h4 class="card-title fw-bold">Portfolio Alip</h4>
-                        <p class="card-text text-muted">Halaman profil profesional dan daftar riwayat hidup digital.</p>
-                        <div class="mt-auto pt-3">
-                            <a href="#" class="btn btn-success btn-visit w-100">Lihat Profil</a>
-                        </div>
+                    <div class="mt-auto">
+                        <button class="btn btn-outline-secondary btn-visit w-100" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
@@ -137,15 +126,9 @@
         </div>
     </div>
 
-    <footer class="bg-primary text-white pt-5 pb-4 mt-5">
-        <div class="container text-center">
-            <p class="small">Copyright &copy; 2025 <strong class="text-warning">Alip Maulana</strong> - Sistem Informasi
-                Dehasen.</p>
-            <div class="fs-4">
-                <i class="bi bi-github mx-2"></i>
-                <i class="bi bi-globe mx-2"></i>
-                <i class="bi bi-server mx-2"></i>
-            </div>
+    <footer class="bg-white py-4 mt-5 border-top">
+        <div class="container text-center text-muted">
+            <p class="small mb-0">&copy; 2025 Kolektif Kelas Sistem Informasi - Universitas Dehasen</p>
         </div>
     </footer>
 </body>
