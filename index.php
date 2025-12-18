@@ -223,6 +223,20 @@ while($row = mysqli_fetch_assoc($query)){
                 </div>
             </div>
 
+            <div class="col" data-aos="fade-up" data-aos-delay="800">
+                <div class="card card-toko h-100 p-4">
+                    <span class="visit-count">
+                        <i class="bi bi-eye-fill me-1"></i>
+                        <?php echo number_format($stats['surya'] ?? 0); ?>
+                    </span>
+                    <div class="text-center mt-3">
+                        <div class="icon-circle"><i class="bi bi-lightning-fill"></i></div>
+                        <h4 class="fw-bold mb-4">Surya Store</h4>
+                        <a href="visit.php?toko=surya" class="btn btn-modern">Masuk Toko</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
