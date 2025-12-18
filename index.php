@@ -62,7 +62,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-grid-fill me-2"></i>Toko Sistem Informasi</a>
+                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-grid-fill me-2"></i>Toko Sistem Informasi waduh</a>
                 <div class="ms-auto">
                     <a href="/phpmyadmin/" target="_blank" class="btn btn-light btn-sm fw-bold">
                         <i class="bi bi-database-fill me-1"></i> Database Portal
@@ -74,7 +74,7 @@
 
     <div class="hero-section text-center">
         <div class="container">
-            <h1 class="display-5 fw-bold text-uppercase">Toko Sistem Informasi Anjay</h1>
+            <h1 class="display-5 fw-bold text-uppercase">Toko Sistem Informasi </h1>
             <p class="lead">Kumpulan Project UMKM Digital Mahasiswa Sistem Informasi Dehasen</p>
         </div>
     </div>
