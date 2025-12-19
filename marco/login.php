@@ -1,12 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kedai Kito Online</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Login Admin | Kedai Kito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0d6efd 0%, #003d99 100%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .login-card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 30px 30px 10px 30px;
+        text-align: center;
+    }
+
+    .card-header h4 {
+        font-weight: 600;
+        color: #0d6efd;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 1px solid #dee2e6;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+    }
+
+    .btn-login {
+        background-color: #0d6efd;
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .btn-login:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .icon-box {
+        font-size: 3rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+    }
+    </style>
 </head>
 
 <body>
@@ -48,6 +113,7 @@
             <small class="text-muted">&copy; 2025 Kedai Kito Online</small>
         </div>
     </div>
+
     <?php
     if (isset($_POST['submit'])) {
         session_start();
@@ -70,6 +136,8 @@
         }
     }
     ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
