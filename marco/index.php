@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produk | Kedai Kito Online</title>
-
+    <title>Produk | toko kaset</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
 
+</head>
 
 <body>
     <!---- header ---->
@@ -17,7 +15,7 @@
 
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
             <div class="container">
-                <a class="navbar-brand" href="#">goblin store</a>
+                <a class="navbar-brand" href="#">toko kaset</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,40 +37,42 @@
     </header>
 
     <!--- content --->
- <div class="row mt-4">
-<?php
-include 'koneksi.php';
-$produk = mysqli_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
-if (mysqli_num_rows($produk) > 0) {
-    while ($p = mysqli_fetch_array($produk)) {
-?>
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card position-relative h-100">
-            <span class="price-badge">Rp <?php echo number_format($p['harga']) ?></span>
+    <div class="section">
+        <div class="container ">
 
-            <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top">
 
-            <div class="card-body">
-                <p class="nama"><?php echo $p['namaproduk'] ?></p>
-                <p class="deskripsi"><?php echo $p['deskripsi'] ?></p>
+            <h3>kaset pita</h3>
+            <?php
+            include 'koneksi.php';
+            $produk = mysqli_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
+            if (mysqli_num_rows($produk) > 0) {
+                while ($p = mysqli_fetch_array($produk)) {
+            ?>
 
-                <a href="https://wa.me/6287891207306"
-                   target="_blank"
-                   class="btn btn-pesan">Beli
-                </a>
-            </div>
+                    <div class="card mt-5 mx-auto d-flex justify-content-center" style="width: 500px;">
+                        <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="nama"><?php echo $p['namaproduk'] ?></p>
+                            <p class="deskripsi"><?php echo $p['deskripsi'] ?></p>
+                            <p class="harga">Rp. <?php echo $p['harga'] ?></p>
+                            <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-secondary">Beli</a>
+                        </div>
+                    </div>
+
+                <?php  }
+            } else { ?>
+
+
+                <p>Produk Tidak Ada</p>
+            <?php } ?>
+
+
         </div>
-    </div>
-<?php }} else { ?>
-    <p class="text-center">Produk Tidak Ada</p>
-<?php } ?>
-</div>
-
 
         <!--- footer --->
         <footer>
-            <div class="mt-5 p-3 text-center footer">
-                <small>Copyright &copy; 2025 - goblin store mpruy</small>
+            <div class="mt-5 bg-primary text-light p-3 text-center">
+                <small>Copyright &copy; 2025 - toko kaset</small>
             </div>
         </footer>
 
