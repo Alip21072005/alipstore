@@ -371,7 +371,7 @@ while($row = mysqli_fetch_assoc($query)){
                     </span>
                     <div class="text-center mt-3">
                         <div class="icon-circle"><i class="bi bi-lightning-fill"></i></div>
-                        <h4 class="fw-bold mb-4">Shopi</h4>
+                        <h4 class="fw-bold mb-4">Shopi Ine Devita</h4>
                         <a href="visit.php?toko=shopi" class="btn btn-modern">Masuk Toko</a>
                     </div>
                 </div>
