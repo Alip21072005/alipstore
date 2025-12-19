@@ -15,7 +15,7 @@
 
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
             <div class="container">
-                <a class="navbar-brand" href="#">Kedai Kito</a>
+                <a class="navbar-brand" href="#">toko parfum</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,14 +44,14 @@
     <div class="section">
         <div class="container ">
             <h3>Selamat Datang Administrator</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur perspiciatis cumque dolorem sapiente vero placeat odit tempora facilis, molestias earum adipisci quod? Vel, debitis tempore facilis soluta iusto perspiciatis fuga reiciendis inventore officiis nostrum consequuntur voluptatum aperiam omnis, saepe deserunt non molestias beatae repellat odit blanditiis ducimus rem eos illum dignissimos! Facilis quasi pariatur minima rerum architecto, repellat mollitia qui, quibusdam sapiente at fuga enim repudiandae beatae porro omnis provident? Hic architecto natus, vel sunt nobis velit amet nesciunt, maxime placeat dolorem ipsa magnam. Officia qui, nobis sed molestiae fuga illo exercitationem illum quasi fugiat tenetur. Quisquam cumque vitae quos aperiam porro quis tempora ullam recusandae rem! Praesentium soluta tempore adipisci exercitationem rerum rem doloribus veniam excepturi corrupti voluptatibus, animi ea omnis fugit quas, beatae nam enim numquam voluptas, ipsum similique? Quaerat ab nesciunt ullam voluptas. Ea harum id doloribus, minus fugiat sequi maxime assumenda corporis quo quaerat hic aliquam!
+           
         </div>
     </div>
 
     <!--- footer --->
     <footer>
         <div class="mt-5 bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Kedai Kito Online</small>
+            <small>Copyright &copy; 2025 - toko parfum alpa Online</small>
         </div>
     </footer>
 
