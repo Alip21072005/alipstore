@@ -14,7 +14,7 @@ if ($_SESSION['status_login'] != true) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | Kedai Online</title>
+    <title>Dashboard | Kedai Sopia Manis</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
@@ -25,7 +25,7 @@ if ($_SESSION['status_login'] != true) {
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
             <div class="container">
-                <a class="navbar-brand" href="#">Kedai Kito</a>
+                <a class="navbar-brand" href="#">Kedai Sopia Manis</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -143,7 +143,7 @@ if ($_SESSION['status_login'] != true) {
         <!--- footer --->
         <footer>
             <div class="mt-5 bg-primary text-light p-3 text-center">
-                <small>Copyright &copy; 2025 - Kedai Kito SOPIA MARINI</small>
+                <small>Copyright &copy; 2025 - Kedai Sopia Manis</small>
             </div>
         </footer>
 

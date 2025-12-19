@@ -114,3 +114,13 @@ header ul li a {
 	text-align: justify;
 	
 }
+
+.navbar-pink {
+  background-color: #ff8fb1;
+}
+
+.navbar-pink .navbar-brand,
+.navbar-pink .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
