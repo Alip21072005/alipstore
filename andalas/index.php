@@ -17,7 +17,8 @@
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
             <div class="container">
                 <a class="navbar-brand" href="#">Coffee Kito</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,21 +51,21 @@
                 while ($p = mysqli_fetch_array($produk)) {
             ?>
 
-                    <div class="card mt-5 mx-auto d-flex justify-content-center" style="width: 500px;">
-                        <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="nama"><?php echo $p['namaproduk'] ?></p>
-                            <p class="deskripsi"><?php echo $p['deskripsi'] ?></p>
-                            <p class="harga">Rp. <?php echo $p['harga'] ?></p>
-                            <a href="https://wa.me/6285383826267" target="_blank" class="btn btn-secondary">Beli</a>
-                        </div>
-                    </div>
+            <div class="card mt-5 mx-auto d-flex justify-content-center" style="width: 500px;">
+                <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="nama"><?php echo $p['namaproduk'] ?></p>
+                    <p class="deskripsi"><?php echo $p['deskripsi'] ?></p>
+                    <p class="harga">Rp. <?php echo $p['harga'] ?></p>
+                    <a href="https://wa.me/6285383826267" target="_blank" class="btn btn-secondary">Beli</a>
+                </div>
+            </div>
 
-                <?php  }
+            <?php  }
             } else { ?>
 
 
-                <p>Produk Tidak Ada</p>
+            <p>Produk Tidak Ada</p>
             <?php } ?>
 
 
@@ -78,5 +79,6 @@
         </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
