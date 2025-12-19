@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
     .brand-logo {
         background: linear-gradient(135deg, #ff85a2 0%, #ff4d6d 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800;
         letter-spacing: 3px;
