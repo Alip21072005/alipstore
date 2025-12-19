@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daftar Produk | Najwa Store</title>
+    <title>Daftar Produk | Della</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
     /* Pengaturan agar footer tetap di bawah */
@@ -46,7 +46,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">Najwa Store</a>
+                <a class="navbar-brand fw-bold" href="#">Della</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -105,7 +105,7 @@
                                         <?php echo number_format($row['harga'], 0, ',', '.') ?></td>
                                     <td class="small text-muted"><?php echo $row['deskripsi'] ?></td>
                                     <td class="text-center">
-                                        <a href="https://wa.me/6289693320805?text=Halo Najwa Store, saya ingin memesan <?php echo $row['namaproduk'] ?>"
+                                        <a href="https://wa.me/6285758170118?text=Halo Della, saya ingin memesan <?php echo $row['namaproduk'] ?>"
                                             target="_blank" class="btn btn-success btn-sm px-3">
                                             Beli
                                         </a>
@@ -127,7 +127,7 @@
 
     <footer class="bg-primary text-light py-3 mt-auto shadow-lg">
         <div class="container text-center">
-            <small>Copyright &copy; 2025 - <strong>Najwa Store</strong>. All rights reserved.</small>
+            <small>Copyright &copy; 2025 - <strong>Della</strong>. All rights reserved.</small>
         </div>
     </footer>
 

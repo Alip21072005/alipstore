@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | Najwa Store</title>
+    <title>Dashboard | Della</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
     /* CSS agar footer tetap di bawah */
@@ -56,7 +56,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="dashboard.php">Najwa Store</a>
+                <a class="navbar-brand fw-bold" href="dashboard.php">Della</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -80,7 +80,7 @@
             <div class="card welcome-card shadow mb-4">
                 <div class="card-body p-5">
                     <h2 class="fw-bold">Selamat Datang, <?php echo $_SESSION['a_global']->admin_name ?>!</h2>
-                    <p class="lead">Anda berada di panel kendali Najwa Store. Kelola dagangan Anda dengan mudah di sini.
+                    <p class="lead">Anda berada di panel kendali Della. Kelola dagangan Anda dengan mudah di sini.
                     </p>
                 </div>
             </div>
@@ -118,7 +118,7 @@
 
     <footer class="bg-white border-top py-3 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 - <strong>Najwa Store</strong>. All rights reserved.</small>
+            <small class="text-muted">Copyright &copy; 2025 - <strong>Della</strong>. All rights reserved.</small>
         </div>
     </footer>
 

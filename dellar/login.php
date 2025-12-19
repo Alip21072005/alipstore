@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Najwa Store</title>
+    <title>Della</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
@@ -19,7 +19,7 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-header text-center fw-bold">
-                            LOGIN | NAJWA STORE
+                            LOGIN | Della
                         </div>
                         <div class="card-body">
                             <div class="mb-3">

@@ -19,7 +19,7 @@ $p = mysqli_fetch_object($produk);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Produk | Najwa Store</title>
+    <title>Edit Produk | Della</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 </head>
@@ -28,7 +28,7 @@ $p = mysqli_fetch_object($produk);
     <header>
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="dashboard.php">Najwa Store</a>
+                <a class="navbar-brand fw-bold" href="dashboard.php">Della</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -167,7 +167,7 @@ $p = mysqli_fetch_object($produk);
 
     <footer class="mt-5">
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - <strong>Najwa Store</strong>. All rights reserved.</small>
+            <small>Copyright &copy; 2025 - <strong>Della</strong>. All rights reserved.</small>
         </div>
     </footer>
 
