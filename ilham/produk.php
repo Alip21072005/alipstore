@@ -1,101 +1,99 @@
 <?php
-include "koneksi.php";
 session_start();
 include "koneksi.php";
 
-if ($_SESSION['status_login'] != true) {
+if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     echo '<script>window.location="login.php"</script>';
+    exit;
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produk | Kedai Kito Online</title>
+    <title>Data Produk | Kedai Kito Online</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
 </head>
 
 <body>
-    <!---- header ---->
     <header>
-        <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#">Kedai Kito</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="dashboard.php">Kedai Kito</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="kategori.php">Data Kategori</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="produk.php">Data Produk</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="keluar.php">Logout</a>
-                        </li>
-
+                        <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kategori.php">Data Kategori</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="produk.php">Data Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="keluar.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!--- content --->
-    <div class="section">
-        <div class="container ">
-            <h3>Produk</h3>
-            <a class="btn btn-primary mb-3" href="tambah_produk.php" role="button">Tambah Data</a>
-            <div class="card mb-5">
-                <div class="card-body">
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3>Data Produk</h3>
+            <a class="btn btn-primary" href="tambah_produk.php"> + Tambah Produk</a>
+        </div>
 
-                    <table class="table">
-                        <thead>
+        <div class="card shadow-sm mb-5">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
                             <tr>
-                                <th width="100px">No</th>
+                                <th width="60px">No</th>
                                 <th>Kategori</th>
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
-                                <th>Deskripsi</th>
                                 <th>Gambar</th>
                                 <th>Status</th>
-                                <th width="150px">Aksi</th>
+                                <th width="180px" class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             $no = 1;
-
+                            // Pastikan nama tabel dan kolom sesuai dengan database
                             $produk = mysqli_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC");
+                            
                             if (mysqli_num_rows($produk) > 0) {
                                 while ($row = mysqli_fetch_array($produk)) {
                             ?>
-                                    <tr>
-                                        <td><?php echo $no++ ?></td>
-                                        <td><?php echo $row['namakategori'] ?></td>
-                                        <td><?php echo $row['namaproduk'] ?></td>
-                                        <td><?php echo $row['harga'] ?></td>
-                                        <td><?php echo $row['deskripsi'] ?></td>
-                                        <td><img src="image/<?php echo $row['gambar'] ?>" width=" 70px"></td>
-                                        <td><?php echo $row['status'] ?></td>
-
-                                        <td>
-                                            <a href="edit_produk.php?id=<?php echo $row['idproduk'] ?>">Edit</a> |
-                                            <a href="proses_hapus.php?idp=<?php echo $row['idproduk'] ?>" onclick=" return confirm('Yakin ingin hapus ?')">Hapus</a>
-                                        </td>
-                                    </tr>
-                                <?php }
+                            <tr>
+                                <td><?php echo $no++ ?></td>
+                                <td><?php echo $row['namakategori'] ?></td>
+                                <td><?php echo $row['namaproduk'] ?></td>
+                                <td>Rp <?php echo number_format($row['hargaproduk'], 0, ',', '.') ?></td>
+                                <td>
+                                    <a href="image/<?php echo $row['fotoproduk'] ?>" target="_blank">
+                                        <img src="image/<?php echo $row['fotoproduk'] ?>" width="60px"
+                                            class="rounded border">
+                                    </a>
+                                </td>
+                                <td>
+                                    <?php echo ($row['statusproduk'] == 1) ? '<span class="badge bg-success">Aktif</span>' : '<span class="badge bg-danger">Tidak Aktif</span>'; ?>
+                                </td>
+                                <td class="text-center">
+                                    <a href="edit_produk.php?id=<?php echo $row['idproduk'] ?>"
+                                        class="btn btn-sm btn-warning text-white">Edit</a>
+                                    <a href="proses_hapus.php?idp=<?php echo $row['idproduk'] ?>"
+                                        class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Yakin ingin menghapus produk ini?')">Hapus</a>
+                                </td>
+                            </tr>
+                            <?php }
                             } else { ?>
-                                <tr>
-                                    <td colspan="8">Tidak Ada Data</td>
-                                </tr>
+                            <tr>
+                                <td colspan="7" class="text-center">Tidak ada data produk.</td>
+                            </tr>
                             <?php } ?>
                         </tbody>
                     </table>
@@ -104,13 +102,11 @@ if ($_SESSION['status_login'] != true) {
         </div>
     </div>
 
-    <!--- footer --->
-    <footer>
-        <div class="mt-5 bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Kedai Kito Online</small>
-        </div>
+    <footer class="bg-primary text-light p-3 text-center">
+        <small>Copyright &copy; 2025 - Kedai Kito Online</small>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
