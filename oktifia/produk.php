@@ -169,8 +169,8 @@
                                 <td class="text-pink">Rp <?php echo number_format($row['harga'], 0, ',', '.') ?></td>
                                 <td>
                                     <div class="img-container shadow-sm">
-                                        <a href="produk/<?php echo $row['gambar'] ?>" target="_blank">
-                                            <img src="produk/<?php echo $row['gambar'] ?>" class="prod-img"
+                                        <a href="./image/<?php echo $row['gambar'] ?>" target="_blank">
+                                            <img src="./image/<?php echo $row['gambar'] ?>" class="prod-img"
                                                 alt="Boneka">
                                         </a>
                                     </div>

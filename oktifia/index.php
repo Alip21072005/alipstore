@@ -141,7 +141,7 @@
             <div class="col">
                 <div class="card card-produk position-relative">
                     <span class="badge-kategori"><?php echo $p['namakategori'] ?></span>
-                    <img src="produk/<?php echo $p['gambar'] ?>" class="card-img-top"
+                    <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top"
                         alt="<?php echo $p['namaproduk'] ?>">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold text-dark"><?php echo $p['namaproduk'] ?></h5>

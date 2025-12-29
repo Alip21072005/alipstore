@@ -166,7 +166,7 @@
 
                             <div class="mb-4 text-center p-4 bg-light rounded-4 border border-white">
                                 <label class="form-label d-block mb-3">Foto Boneka Saat Ini</label>
-                                <img src="produk/<?php echo $p->gambar ?>" width="180px" class="current-img mb-3"
+                                <img src="./image/<?php echo $p->gambar ?>" width="180px" class="current-img mb-3"
                                     id="preview">
                                 <input type="hidden" name="foto_lama" value="<?php echo $p->gambar ?>">
                                 <div class="px-md-5">
@@ -213,16 +213,16 @@
                             if ($filename != '') {
                                 $type1 = explode('.', $filename);
                                 $type2 = strtolower(end($type1));
-                                $newname = 'produk' . time() . '.' . $type2;
+                                $newname = 'image' . time() . '.' . $type2;
                                 $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
 
                                 if (!in_array($type2, $tipe_diizinkan)) {
                                     echo '<div class="alert alert-danger mt-3 text-center">Format file tidak diizinkan!</div>';
                                 } else {
-                                    if(file_exists('./produk/' . $foto_lama)) {
-                                        unlink('./produk/' . $foto_lama);
+                                    if(file_exists('./image/' . $foto_lama)) {
+                                        unlink('./image/' . $foto_lama);
                                     }
-                                    move_uploaded_file($tmp_name, './produk/' . $newname);
+                                    move_uploaded_file($tmp_name, './image/' . $newname);
                                     $namagambar = $newname;
                                 }
                             } else {

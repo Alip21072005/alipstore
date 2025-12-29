@@ -130,7 +130,7 @@
             <div class="col">
                 <div class="card card-produk position-relative">
                     <span class="badge-kategori"><?php echo $row['namakategori'] ?></span>
-                    <img src="image/<?php echo $row['gambar'] ?>" class="card-img-top"
+                    <img src="./image/<?php echo $row['gambar'] ?>" class="card-img-top"
                         alt="<?php echo $row['namaproduk'] ?>">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold mb-2 text-dark"><?php echo $row['namaproduk'] ?></h5>

@@ -168,7 +168,7 @@
                                 <input type="file" name="gambar" id="gambar" class="form-control mb-2" required
                                     onchange="previewImage()">
                                 <div class="text-center">
-                                    <img id="img-preview" src="" alt="Preview Gambar">
+                                    <img id="img-preview" src="./image/placeholder.jpg" alt="Preview Gambar">
                                 </div>
                                 <small class="text-muted d-block mt-2">Format: JPG, JPEG, PNG, GIF (Maks: 2MB)</small>
                             </div>
@@ -213,14 +213,14 @@
                             $tmp_name = $_FILES['gambar']['tmp_name'];
                             $type2    = pathinfo($filename, PATHINFO_EXTENSION);
                             
-                            // Sesuaikan folder tujuan (pakai 'produk' agar sama dengan halaman daftar/edit sebelumnya)
-                            $newname  = 'produk' . time() . '.' . $type2;
+                            // Sesuaikan folder tujuan (pakai 'image' agar sama dengan halaman daftar/edit sebelumnya)
+                            $newname  = 'image' . time() . '.' . $type2;
                             $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
 
                             if (!in_array(strtolower($type2), $tipe_diizinkan)) {
                                 echo '<div class="alert alert-danger mt-3 text-center">Format file tidak didukung!</div>';
                             } else {
-                                move_uploaded_file($tmp_name, './produk/' . $newname);
+                                move_uploaded_file($tmp_name, './image/' . $newname);
                                 $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
                                     '$kategori', '$nama', '$harga', '$deskripsi', '$newname', '$status')");
 
