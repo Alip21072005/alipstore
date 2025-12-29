@@ -170,8 +170,7 @@
                                 <td>
                                     <div class="img-container shadow-sm">
                                         <a href="./image/<?php echo $row['gambar'] ?>" target="_blank">
-                                            <img src="./image/<?php echo $row['gambar'] ?>" class="prod-img"
-                                                alt="Boneka">
+                                            <img src="image/<?php echo $row['gambar'] ?>" class="prod-img" alt="Boneka">
                                         </a>
                                     </div>
                                 </td>
