@@ -162,13 +162,13 @@
                             <?php
                             if (isset($_POST['submit'])) {
                                 $nama = ucwords($_POST['kategori']);
-                                $insert = mysqli_query($conn, "INSERT INTO kategori VALUES (null, '" . $nama . "') ");
+                                $insert = dummy_query($conn, "INSERT INTO kategori VALUES (null, '" . $nama . "') ");
                                 
                                 if ($insert) {
                                     echo '<script>alert("Kategori berhasil ditambahkan!")</script>';
                                     echo '<script>window.location="kategori.php"</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger mt-3">Gagal: ' . mysqli_error($conn) . '</div>';
+                                    echo '<div class="alert alert-danger mt-3">Gagal: ' . dummy_error($conn) . '</div>';
                                 }
                             }
                             ?>

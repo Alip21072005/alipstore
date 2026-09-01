@@ -10,11 +10,11 @@ $pass   = "SistemInformasiDehasen123_";
 $dbname = "surya";
 
 /* KONEKSI DATABASE */
-$conn = mysqli_connect($host, $user, $pass, $dbname);
+$conn = dummy_connect($host, $user, $pass, $dbname);
 
 if (!$conn) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
+    die("Koneksi database gagal: " . dummy_connect_error());
 }
 
 /* SET CHARSET (PENTING) */
-mysqli_set_charset($conn, "utf8");
+dummy_set_charset($conn, "utf8");

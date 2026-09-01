@@ -58,8 +58,8 @@
                             <select class="form-select" name="kategori" required>
                                 <option value="">-- Pilih Kategori Produk --</option>
                                 <?php
-                                $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                while ($r = mysqli_fetch_array($kategori)) {
+                                $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                while ($r = dummy_fetch_array($kategori)) {
                                 ?>
                                 <option value="<?php echo $r['idkategori'] ?>"><?php echo $r['namakategori'] ?></option>
                                 <?php } ?>
@@ -130,7 +130,7 @@
                             if (!is_dir('image')) { mkdir('image'); }
 
                             if (move_uploaded_file($tmp_name, './image/' . $newname)) {
-                                $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                                $insert = dummy_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
                                     '".$kategori."',
                                     '".$nama."',
                                     '".$harga."',
@@ -143,7 +143,7 @@
                                     echo '<script>alert("Tambah Data Berhasil") </script>';
                                     echo '<script>window.location="produk.php" </script>';
                                 } else {
-                                    echo 'Gagal database: ' . mysqli_error($conn);
+                                    echo 'Gagal database: ' . dummy_error($conn);
                                 }
                             } else {
                                 echo '<script>alert("Gagal mengunggah file")</script>';

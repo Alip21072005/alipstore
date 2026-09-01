@@ -94,10 +94,10 @@ body {
                     <tbody>
                     <?php
                     $no = 1;
-                    $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                    $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
 
-                    if (mysqli_num_rows($kategori) > 0) {
-                        while ($row = mysqli_fetch_array($kategori)) {
+                    if (dummy_num_rows($kategori) > 0) {
+                        while ($row = dummy_fetch_array($kategori)) {
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>

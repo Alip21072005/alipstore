@@ -85,8 +85,8 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
                             <select class="form-select" name="kategori" required>
                                 <option value="">-- Pilih Kategori --</option>
                                 <?php
-                                $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                while ($r = mysqli_fetch_array($kategori)) {
+                                $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                while ($r = dummy_fetch_array($kategori)) {
                                 ?>
                                     <option value="<?= $r['idkategori']; ?>">
                                         <?= $r['namakategori']; ?>
@@ -140,7 +140,7 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
                     if (isset($_POST['submit'])) {
 
                         $kategori   = $_POST['kategori'];
-                        $nama       = mysqli_real_escape_string($conn, $_POST['nama']);
+                        $nama       = dummy_real_escape_string($conn, $_POST['nama']);
                         $harga      = $_POST['harga'];
                         $deskripsi  = $_POST['deskripsi'];
                         $status     = $_POST['status'];
@@ -159,7 +159,7 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
 
                             move_uploaded_file($tmp_name, './image/' . $newname);
 
-                            $insert = mysqli_query($conn, "INSERT INTO produk VALUES (
+                            $insert = dummy_query($conn, "INSERT INTO produk VALUES (
                                 null,
                                 '$kategori',
                                 '$nama',

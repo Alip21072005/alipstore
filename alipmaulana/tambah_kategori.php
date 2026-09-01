@@ -110,9 +110,9 @@
                         <?php
                         if (isset($_POST['submit'])) {
                             // Membersihkan input dan merubah format teks (ucwords)
-                            $nama = mysqli_real_escape_string($conn, ucwords(strtolower($_POST['kategori'])));
+                            $nama = dummy_real_escape_string($conn, ucwords(strtolower($_POST['kategori'])));
                             
-                            $insert = mysqli_query($conn, "INSERT INTO kategori (namakategori) VALUES ('$nama')");
+                            $insert = dummy_query($conn, "INSERT INTO kategori (namakategori) VALUES ('$nama')");
                             
                             if ($insert) {
                                 echo '<div class="alert alert-success mt-4 mb-0 border-0 shadow-sm">
@@ -124,7 +124,7 @@
                                         }, 1500);
                                       </script>';
                             } else {
-                                echo '<div class="alert alert-danger mt-4 mb-0">Gagal: ' . mysqli_error($conn) . '</div>';
+                                echo '<div class="alert alert-danger mt-4 mb-0">Gagal: ' . dummy_error($conn) . '</div>';
                             }
                         }
                         ?>

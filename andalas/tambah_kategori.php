@@ -61,14 +61,14 @@ include "koneksi.php";
                     <?php
                     if (isset($_POST['submit'])) {
                         $nama = ucwords($_POST['kategori']);
-                        $insert = mysqli_query($conn, "INSERT INTO kategori VALUES (
+                        $insert = dummy_query($conn, "INSERT INTO kategori VALUES (
                                                                     null,
                                                                     '" . $nama . "') ");
                         if ($insert) {
                             echo '<script>alert("Tambah Data Berhasil") </script>';
                             echo '<script>window.location="kategori.php" </script>';
                         } else {
-                            echo 'gagal' . mysqli_error($conn);
+                            echo 'gagal' . dummy_error($conn);
                         }
                     }
                     ?>

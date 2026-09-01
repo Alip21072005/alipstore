@@ -107,17 +107,17 @@ if (isset($_POST['submit'])) {
     session_start();
     include 'koneksi.php';
 
-    $user = mysqli_real_escape_string($conn, $_POST['user']);
-    $pass = mysqli_real_escape_string($conn, $_POST['pass']);
+    $user = dummy_real_escape_string($conn, $_POST['user']);
+    $pass = dummy_real_escape_string($conn, $_POST['pass']);
 
-    $cek = mysqli_query($conn,
+    $cek = dummy_query($conn,
         "SELECT * FROM user 
          WHERE username='$user' 
          AND password='".md5($pass)."'"
     );
 
-    if (mysqli_num_rows($cek) > 0) {
-        $d = mysqli_fetch_object($cek);
+    if (dummy_num_rows($cek) > 0) {
+        $d = dummy_fetch_object($cek);
         $_SESSION['status_login'] = true;
         $_SESSION['a_global'] = $d;
         $_SESSION['id'] = $d->idadmin;

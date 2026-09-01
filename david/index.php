@@ -56,9 +56,9 @@
             <div class="row">
                 <?php
                 include 'koneksi.php';
-                $produk = mysqli_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
-                if (mysqli_num_rows($produk) > 0) {
-                    while ($p = mysqli_fetch_array($produk)) {
+                $produk = dummy_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
+                if (dummy_num_rows($produk) > 0) {
+                    while ($p = dummy_fetch_array($produk)) {
                 ?>
                         <div class="col-md-3 mb-4">
                             <div class="card h-100">

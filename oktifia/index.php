@@ -134,9 +134,9 @@
             <?php
             include 'koneksi.php';
             // Query tetap sama karena struktur database diasumsikan sama
-            $produk = mysqli_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
-            if (mysqli_num_rows($produk) > 0) {
-                while ($p = mysqli_fetch_array($produk)) {
+            $produk = dummy_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
+            if (dummy_num_rows($produk) > 0) {
+                while ($p = dummy_fetch_array($produk)) {
             ?>
             <div class="col">
                 <div class="card card-produk position-relative">

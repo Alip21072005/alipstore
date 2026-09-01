@@ -2,11 +2,11 @@
     include 'koneksi.php';
     // Gunakan ini untuk mengecek apakah query berhasil atau tidak
     $query = "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8";
-    $produk = mysqli_query($conn, $query);
+    $produk = dummy_query($conn, $query);
 
     // Jika query gagal, tampilkan pesan error untuk mempermudah perbaikan
     if (!$produk) {
-        die("Query Error: " . mysqli_errno($conn) . " - " . mysqli_error($conn));
+        die("Query Error: " . dummy_errno($conn) . " - " . dummy_error($conn));
     }
 ?>
 <!DOCTYPE html>
@@ -64,8 +64,8 @@
 
     <div class="container mb-5">
         <div class="row g-4">
-            <?php if (mysqli_num_rows($produk) > 0) { ?>
-                <?php while ($p = mysqli_fetch_array($produk)) { ?>
+            <?php if (dummy_num_rows($produk) > 0) { ?>
+                <?php while ($p = dummy_fetch_array($produk)) { ?>
                     <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
                         <div class="product-card">
                             <div class="img-container">

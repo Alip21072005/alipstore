@@ -6,11 +6,11 @@
         echo '<script>window.location="login.php"</script>';
     }
 
-    $produk = mysqli_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
-    if(mysqli_num_rows($produk) == 0){
+    $produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
+    if(dummy_num_rows($produk) == 0){
         echo '<script>window.location="produk.php"</script>';
     }
-    $p = mysqli_fetch_object($produk);
+    $p = dummy_fetch_object($produk);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -102,8 +102,8 @@
                                     <select class="form-select" name="kategori" required>
                                         <option value="">-- Pilih Kategori --</option>
                                         <?php
-                                        $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                        while ($r = mysqli_fetch_array($kategori)) {
+                                        $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                        while ($r = dummy_fetch_array($kategori)) {
                                             $selected = ($r['idkategori'] == $p->idkategori) ? 'selected' : '';
                                             echo "<option value='".$r['idkategori']."' $selected>".$r['namakategori']."</option>";
                                         }
@@ -186,7 +186,7 @@
                                 $namagambar = $foto_lama;
                             }
 
-                            $update = mysqli_query($conn, "UPDATE produk SET 
+                            $update = dummy_query($conn, "UPDATE produk SET 
                                 idkategori = '$kategori',
                                 namaproduk = '$nama',
                                 harga      = '$harga',
@@ -198,7 +198,7 @@
                             if ($update) {
                                 echo '<script>alert("Data berhasil diperbarui!"); window.location="produk.php";</script>';
                             } else {
-                                echo 'Gagal ' . mysqli_error($conn);
+                                echo 'Gagal ' . dummy_error($conn);
                             }
                         }
                         ?>

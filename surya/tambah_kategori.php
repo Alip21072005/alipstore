@@ -78,10 +78,10 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
                     <?php
                     if (isset($_POST['submit'])) {
 
-                        $nama = ucwords(mysqli_real_escape_string($conn, $_POST['kategori']));
+                        $nama = ucwords(dummy_real_escape_string($conn, $_POST['kategori']));
 
                         if ($nama != "") {
-                            $insert = mysqli_query(
+                            $insert = dummy_query(
                                 $conn,
                                 "INSERT INTO kategori (namakategori) VALUES ('$nama')"
                             );

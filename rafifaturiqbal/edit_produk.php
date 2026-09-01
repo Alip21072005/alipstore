@@ -7,8 +7,8 @@ if ($_SESSION['status_login'] != true) {
     echo '<script>window.location="login.php"</script>';
 }
 
-$produk = mysqli_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
-$p = mysqli_fetch_object($produk);
+$produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
+$p = dummy_fetch_object($produk);
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,8 +63,8 @@ $p = mysqli_fetch_object($produk);
                         <select class="form-select" name="kategori" required>
                             <option value="">-- Pilih Kategori Produk --</option>
                             <?php
-                            $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                            while ($r = mysqli_fetch_array($kategori)) {
+                            $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                            while ($r = dummy_fetch_array($kategori)) {
                             ?>
                             <option value="<?php echo $r['idkategori'] ?>"
                                 <?php echo ($r['idkategori'] == $p->idkategori) ? 'selected' : ''; ?> "><?php echo $r['namakategori'] ?></option>
@@ -132,7 +132,7 @@ $p = mysqli_fetch_object($produk);
                             $namagambar = $gambar;
                         }
                         // query update data produk
-                        $update = mysqli_query($conn, "UPDATE produk SET
+                        $update = dummy_query($conn, "UPDATE produk SET
                                             idkategori = '" . $kategori . "',
                                             namaproduk = '" . $nama . "',
                                             harga = '" . $harga . "',
@@ -145,7 +145,7 @@ $p = mysqli_fetch_object($produk);
                             echo '<script>alert("Update Data Berhasil") </script>';
                             echo '<script>window.location="produk.php" </script>';
                         } else {
-                            echo 'Gagal' . mysqli_error($conn);
+                            echo 'Gagal' . dummy_error($conn);
                         }
                     }
                     ?>

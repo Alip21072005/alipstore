@@ -147,12 +147,12 @@
         session_start();
         include 'koneksi.php';
 
-        $user = mysqli_real_escape_string($conn, $_POST['user']);
-        $pass = mysqli_real_escape_string($conn, $_POST['pass']);
+        $user = dummy_real_escape_string($conn, $_POST['user']);
+        $pass = dummy_real_escape_string($conn, $_POST['pass']);
 
-        $cek = mysqli_query($conn, "SELECT * FROM admin WHERE username='" . $user . "' AND password='" . MD5($pass) . "'");
+        $cek = dummy_query($conn, "SELECT * FROM admin WHERE username='" . $user . "' AND password='" . MD5($pass) . "'");
 
-if (mysqli_num_rows($cek) > 0) {
+if (dummy_num_rows($cek) > 0) {
     session_start();
     $_SESSION['admin'] = true;   // ✅ INI SAJA
     $_SESSION['id'] = $d->idadmin;

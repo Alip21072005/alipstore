@@ -68,8 +68,8 @@ if ($_SESSION['status_login'] != true) {
                                         <select class="form-select" name="kategori" required>
                                             <option value="">-- Pilih Kategori --</option>
                                             <?php
-                                            $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                            while ($r = mysqli_fetch_array($kategori)) {
+                                            $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                            while ($r = dummy_fetch_array($kategori)) {
                                                 echo '<option value="'.$r['idkategori'].'">'.$r['namakategori'].'</option>';
                                             }
                                             ?>
@@ -139,7 +139,7 @@ if ($_SESSION['status_login'] != true) {
                                 echo '<div class="alert alert-danger mt-3">Format file tidak diizinkan!</div>';
                             } else {
                                 move_uploaded_file($tmp_name, './image/' . $newname);
-                                $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                                $insert = dummy_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
                                     '".$kategori."',
                                     '".$nama."',
                                     '".$harga."',
@@ -151,7 +151,7 @@ if ($_SESSION['status_login'] != true) {
                                 if ($insert) {
                                     echo '<script>alert("Tambah Data Berhasil"); window.location="produk.php";</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger">Gagal: '.mysqli_error($conn).'</div>';
+                                    echo '<div class="alert alert-danger">Gagal: '.dummy_error($conn).'</div>';
                                 }
                             }
                         }

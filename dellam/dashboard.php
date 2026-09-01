@@ -1,8 +1,8 @@
 <?php
 include "koneksi.php";
 
-$jml_produk   = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM produk"));
-$jml_kategori = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM kategori"));
+$jml_produk   = dummy_num_rows(dummy_query($conn, "SELECT * FROM produk"));
+$jml_kategori = dummy_num_rows(dummy_query($conn, "SELECT * FROM kategori"));
 ?>
 <!DOCTYPE html>
 <html lang="id">

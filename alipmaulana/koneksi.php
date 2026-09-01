@@ -3,5 +3,5 @@ $host     = "202.10.34.87";
 $user     = "alip";
 $pass    = "Alip210725_";
 $dbname    = "alipmaulana";
-$conn     = mysqli_connect($host, $user, $pass, $dbname)
+$conn     = dummy_connect($host, $user, $pass, $dbname)
     or die("Gagal terkoneksi ke database");

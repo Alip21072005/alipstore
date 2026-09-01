@@ -6,12 +6,12 @@ if (!isset($_GET['id'])) {
     echo '<script>window.location="kategori.php"</script>';
 }
 
-$kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE idkategori = '".$_GET['id']."'");
-if (mysqli_num_rows($kategori) == 0) {
+$kategori = dummy_query($conn, "SELECT * FROM kategori WHERE idkategori = '".$_GET['id']."'");
+if (dummy_num_rows($kategori) == 0) {
     echo '<script>window.location="kategori.php"</script>';
 }
 
-$k = mysqli_fetch_object($kategori);
+$k = dummy_fetch_object($kategori);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -107,7 +107,7 @@ body {
                     if (isset($_POST['submit'])) {
                         $nama = ucwords($_POST['kategori']);
 
-                        $update = mysqli_query($conn, "UPDATE kategori SET 
+                        $update = dummy_query($conn, "UPDATE kategori SET 
                             namakategori = '".$nama."'
                             WHERE idkategori = '".$k->idkategori."'
                         ");
@@ -115,7 +115,7 @@ body {
                         if ($update) {
                             echo '<script>alert("Kategori berhasil diperbarui"); window.location="kategori.php";</script>';
                         } else {
-                            echo 'Gagal: '.mysqli_error($conn);
+                            echo 'Gagal: '.dummy_error($conn);
                         }
                     }
                     ?>

@@ -46,8 +46,8 @@ include "koneksi.php";
                     <select class="form-select mb-3" name="idkategori" required>
                         <option value="">-- Pilih Kategori Produk --</option>
                         <?php
-                        $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                        while ($r = mysqli_fetch_array($kategori)) {
+                        $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                        while ($r = dummy_fetch_array($kategori)) {
                         ?>
                             <option value="<?= $r['idkategori'] ?>"><?= $r['namakategori'] ?></option>
                         <?php } ?>
@@ -99,13 +99,13 @@ include "koneksi.php";
                         $sql = "INSERT INTO produk (namaproduk, harga, gambar, deskripsi, status, idkategori)
                                 VALUES ('$namaproduk', '$harga', '$newname', '$deskripsi', '$status', '$idkategori')";
 
-                        $insert = mysqli_query($conn, $sql);
+                        $insert = dummy_query($conn, $sql);
 
                         if ($insert) {
                             echo "<script>alert('Produk berhasil ditambahkan');</script>";
                             echo "<script>window.location='produk.php';</script>";
                         } else {
-                            echo "Gagal: " . mysqli_error($conn);
+                            echo "Gagal: " . dummy_error($conn);
                         }
                     }
                 }

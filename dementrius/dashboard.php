@@ -6,11 +6,11 @@
         exit;
     }
 
-    $total_kategori = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM kategori"));
-    $total_produk   = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM produk"));
+    $total_kategori = dummy_num_rows(dummy_query($conn, "SELECT * FROM kategori"));
+    $total_produk   = dummy_num_rows(dummy_query($conn, "SELECT * FROM produk"));
     
     // Ambil 8 produk terbaru untuk slider
-    $produk_terbaru = mysqli_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC LIMIT 8");
+    $produk_terbaru = dummy_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC LIMIT 8");
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -117,8 +117,8 @@
 
         <div class="product-slider">
             <?php 
-                if(mysqli_num_rows($produk_terbaru) > 0){
-                    while($row = mysqli_fetch_array($produk_terbaru)){
+                if(dummy_num_rows($produk_terbaru) > 0){
+                    while($row = dummy_fetch_array($produk_terbaru)){
             ?>
             <div class="product-item">
                 <div class="product-card">

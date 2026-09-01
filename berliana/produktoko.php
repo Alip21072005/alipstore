@@ -89,9 +89,9 @@
                                 <?php
                                     $no = 1;
                                     // Hanya menampilkan produk dengan status aktif (status = 1)
-                                    $produk = mysqli_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC");
-                                    if (mysqli_num_rows($produk) > 0) {
-                                        while ($row = mysqli_fetch_array($produk)) {
+                                    $produk = dummy_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC");
+                                    if (dummy_num_rows($produk) > 0) {
+                                        while ($row = dummy_fetch_array($produk)) {
                                 ?>
                                 <tr>
                                     <td class="ps-3 fw-bold text-muted"><?php echo $no++ ?></td>

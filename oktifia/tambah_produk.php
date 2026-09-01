@@ -139,8 +139,8 @@
                                     <select class="form-select" name="kategori" required>
                                         <option value="">-- Pilih Kategori --</option>
                                         <?php
-                                            $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                            while ($r = mysqli_fetch_array($kategori)) {
+                                            $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                            while ($r = dummy_fetch_array($kategori)) {
                                                 echo '<option value="'.$r['idkategori'].'">'.$r['namakategori'].'</option>';
                                             }
                                         ?>
@@ -221,13 +221,13 @@
                                 echo '<div class="alert alert-danger mt-3 text-center">Format file tidak didukung!</div>';
                             } else {
                                 move_uploaded_file($tmp_name, './image/' . $newname);
-                                $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                                $insert = dummy_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
                                     '$kategori', '$nama', '$harga', '$deskripsi', '$newname', '$status')");
 
                                 if ($insert) {
                                     echo '<script>alert("Boneka berhasil ditambahkan ke rak, Oktifia!"); window.location="produk.php";</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger mt-3">Gagal: '.mysqli_error($conn).'</div>';
+                                    echo '<div class="alert alert-danger mt-3">Gagal: '.dummy_error($conn).'</div>';
                                 }
                             }
                         }

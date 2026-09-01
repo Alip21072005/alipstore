@@ -81,9 +81,9 @@ if ($_SESSION['status_login'] != true) {
                             <tbody>
                                 <?php
                                 $no = 1;
-                                $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                if (mysqli_num_rows($kategori) > 0) {
-                                    while ($row = mysqli_fetch_array($kategori)) {
+                                $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                if (dummy_num_rows($kategori) > 0) {
+                                    while ($row = dummy_fetch_array($kategori)) {
                                 ?>
                                     <tr>
                                         <td class="ps-4 fw-bold text-muted"><?php echo $no++ ?></td>

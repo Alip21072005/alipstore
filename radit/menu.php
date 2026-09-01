@@ -35,8 +35,8 @@ foreach($kategori as $k){
     echo "<h2 style='margin-top:40px'>$k</h2>";
     echo "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px'>";
     
-    $q = mysqli_query($conn,"SELECT * FROM menu WHERE kategori='$k'");
-    while($row = mysqli_fetch_assoc($q)){
+    $q = dummy_query($conn,"SELECT * FROM menu WHERE kategori='$k'");
+    while($row = dummy_fetch_assoc($q)){
 ?>
     <div style="background:#fff;border-radius:18px;padding:20px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.1)">
         

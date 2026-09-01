@@ -10,7 +10,7 @@ $tmp = $_FILES['foto']['tmp_name'];
 
 move_uploaded_file($tmp, "image/".$foto);
 
-mysqli_query($conn,"INSERT INTO menu VALUES(
+dummy_query($conn,"INSERT INTO menu VALUES(
     null,
     '$kategori',
     '$nama',

@@ -91,10 +91,10 @@
                             <?php
                                 $no = 1;
                                 $query = "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC";
-                                $produk = mysqli_query($conn, $query);
+                                $produk = dummy_query($conn, $query);
                                 
-                                if(mysqli_num_rows($produk) > 0){
-                                    while($row = mysqli_fetch_array($produk)){
+                                if(dummy_num_rows($produk) > 0){
+                                    while($row = dummy_fetch_array($produk)){
                             ?>
                             <tr>
                                 <td><?php echo $no++ ?></td>

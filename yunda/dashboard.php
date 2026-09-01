@@ -175,8 +175,8 @@
                             </div>
                             <h6 class="text-muted text-uppercase fw-bold small mb-2">Total Kategori</h6>
                             <?php 
-                                $kat = mysqli_query($conn, "SELECT * FROM kategori");
-                                $jml_kat = mysqli_num_rows($kat);
+                                $kat = dummy_query($conn, "SELECT * FROM kategori");
+                                $jml_kat = dummy_num_rows($kat);
                             ?>
                             <h2 class="fw-800 mb-3" style="color: #590d22;"><?php echo $jml_kat ?>
                                 <span class="fs-5 fw-normal text-muted">Grup Produk</span>
@@ -197,8 +197,8 @@
                             </div>
                             <h6 class="text-muted text-uppercase fw-bold small mb-2">Total Produk</h6>
                             <?php 
-                                $prod = mysqli_query($conn, "SELECT * FROM produk");
-                                $jml_prod = mysqli_num_rows($prod);
+                                $prod = dummy_query($conn, "SELECT * FROM produk");
+                                $jml_prod = dummy_num_rows($prod);
                             ?>
                             <h2 class="fw-800 mb-3" style="color: #590d22;"><?php echo $jml_prod ?>
                                 <span class="fs-5 fw-normal text-muted">Item Tersedia</span>

@@ -147,13 +147,13 @@ if ($_SESSION['status_login'] != true) {
                         <?php
                         if (isset($_POST['submit'])) {
                             $nama = ucwords($_POST['kategori']);
-                            $insert = mysqli_query($conn, "INSERT INTO kategori VALUES (null, '" . $nama . "') ");
+                            $insert = dummy_query($conn, "INSERT INTO kategori VALUES (null, '" . $nama . "') ");
                             
                             if ($insert) {
                                 echo '<script>alert("BOOM! Data Berhasil Ditambahkan!") </script>';
                                 echo '<script>window.location="kategori.php" </script>';
                             } else {
-                                echo '<div class="alert alert-danger mt-3">Waduh! Gagal nih: '.mysqli_error($conn).'</div>';
+                                echo '<div class="alert alert-danger mt-3">Waduh! Gagal nih: '.dummy_error($conn).'</div>';
                             }
                         }
                         ?>

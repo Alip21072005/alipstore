@@ -158,8 +158,8 @@
                             </div>
                             <h6 class="text-muted text-uppercase fw-bold small mb-1">Total Kategori</h6>
                             <?php 
-                                $kat = mysqli_query($conn, "SELECT * FROM kategori");
-                                $jml_kat = mysqli_num_rows($kat);
+                                $kat = dummy_query($conn, "SELECT * FROM kategori");
+                                $jml_kat = dummy_num_rows($kat);
                             ?>
                             <h2 class="fw-bold mb-3 text-dark"><?php echo $jml_kat ?> <span
                                     class="fs-5 fw-normal text-muted">Kategori</span></h2>
@@ -178,8 +178,8 @@
                             </div>
                             <h6 class="text-muted text-uppercase fw-bold small mb-1">Total Produk</h6>
                             <?php 
-                                $prod = mysqli_query($conn, "SELECT * FROM produk");
-                                $jml_prod = mysqli_num_rows($prod);
+                                $prod = dummy_query($conn, "SELECT * FROM produk");
+                                $jml_prod = dummy_num_rows($prod);
                             ?>
                             <h2 class="fw-bold mb-3 text-dark"><?php echo $jml_prod ?> <span
                                     class="fs-5 fw-normal text-muted">Produk</span></h2>

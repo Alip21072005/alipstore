@@ -17,8 +17,8 @@ include "koneksi.php";
 $id = $_GET['id'];
 
 // Ambil nama foto
-$q = mysqli_query($conn, "SELECT foto FROM menu WHERE idmenu='$id'");
-$data = mysqli_fetch_assoc($q);
+$q = dummy_query($conn, "SELECT foto FROM menu WHERE idmenu='$id'");
+$data = dummy_fetch_assoc($q);
 
 // Hapus file foto
 if(file_exists("image/".$data['foto'])){
@@ -26,7 +26,7 @@ if(file_exists("image/".$data['foto'])){
 }
 
 // Hapus data menu
-mysqli_query($conn, "DELETE FROM menu WHERE idmenu='$id'");
+dummy_query($conn, "DELETE FROM menu WHERE idmenu='$id'");
 
 echo "<script>
     alert('Menu berhasil dihapus');

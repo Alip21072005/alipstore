@@ -13,9 +13,9 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
    ===================== */
 if (isset($_GET['idk'])) {
 
-    $idk = mysqli_real_escape_string($conn, $_GET['idk']);
+    $idk = dummy_real_escape_string($conn, $_GET['idk']);
 
-    mysqli_query(
+    dummy_query(
         $conn,
         "DELETE FROM kategori WHERE idkategori = '$idk'"
     );
@@ -29,16 +29,16 @@ if (isset($_GET['idk'])) {
    ===================== */
 if (isset($_GET['idp'])) {
 
-    $idp = mysqli_real_escape_string($conn, $_GET['idp']);
+    $idp = dummy_real_escape_string($conn, $_GET['idp']);
 
     /* Ambil nama gambar */
-    $produk = mysqli_query(
+    $produk = dummy_query(
         $conn,
         "SELECT gambar FROM produk WHERE idproduk = '$idp'"
     );
 
-    if (mysqli_num_rows($produk) > 0) {
-        $p = mysqli_fetch_object($produk);
+    if (dummy_num_rows($produk) > 0) {
+        $p = dummy_fetch_object($produk);
 
         /* Hapus file gambar jika ada */
         if (!empty($p->gambar) && file_exists("./image/" . $p->gambar)) {
@@ -46,7 +46,7 @@ if (isset($_GET['idp'])) {
         }
 
         /* Hapus data produk */
-        mysqli_query(
+        dummy_query(
             $conn,
             "DELETE FROM produk WHERE idproduk = '$idp'"
         );

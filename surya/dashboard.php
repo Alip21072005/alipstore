@@ -2,9 +2,9 @@
 include "auth.php";
 include "koneksi.php";
 
-$kategori      = mysqli_query($conn, "SELECT * FROM kategori");
-$totalProduk  = mysqli_query($conn, "SELECT * FROM produk");
-$produk       = mysqli_query($conn, "SELECT * FROM produk ORDER BY idproduk DESC LIMIT 5");
+$kategori      = dummy_query($conn, "SELECT * FROM kategori");
+$totalProduk  = dummy_query($conn, "SELECT * FROM produk");
+$produk       = dummy_query($conn, "SELECT * FROM produk ORDER BY idproduk DESC LIMIT 5");
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -92,13 +92,13 @@ body {
         <div class="col-md-4">
             <div class="card shadow-sm p-3">
                 <h6 class="text-muted">Total Kategori</h6>
-                <h2 class="fw-bold"><?= mysqli_num_rows($kategori); ?></h2>
+                <h2 class="fw-bold"><?= dummy_num_rows($kategori); ?></h2>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card shadow-sm p-3">
                 <h6 class="text-muted">Total Produk</h6>
-                <h2 class="fw-bold"><?= mysqli_num_rows($totalProduk); ?></h2>
+                <h2 class="fw-bold"><?= dummy_num_rows($totalProduk); ?></h2>
             </div>
         </div>
         <div class="col-md-4">
@@ -122,7 +122,7 @@ body {
                     </tr>
                 </thead>
                 <tbody>
-                <?php while($p = mysqli_fetch_array($produk)) { ?>
+                <?php while($p = dummy_fetch_array($produk)) { ?>
                     <tr>
                         <td><?= $p['namaproduk']; ?></td>
                         <td>Rp <?= number_format($p['harga'],0,',','.'); ?></td>

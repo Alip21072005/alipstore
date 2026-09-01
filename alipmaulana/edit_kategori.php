@@ -8,11 +8,11 @@
     }
 
     // Ambil data kategori berdasarkan ID
-    $kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE idkategori = '" . mysqli_real_escape_string($conn, $_GET['id']) . "'");
-    if (mysqli_num_rows($kategori) == 0) {
+    $kategori = dummy_query($conn, "SELECT * FROM kategori WHERE idkategori = '" . dummy_real_escape_string($conn, $_GET['id']) . "'");
+    if (dummy_num_rows($kategori) == 0) {
         echo '<script>window.location="kategori.php"</script>';
     }
-    $k = mysqli_fetch_object($kategori);
+    $k = dummy_fetch_object($kategori);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -119,9 +119,9 @@
                         <?php
                         if (isset($_POST['submit'])) {
                             // Membersihkan input (Sanitasi) dan format teks
-                            $nama = mysqli_real_escape_string($conn, ucwords(strtolower($_POST['kategori'])));
+                            $nama = dummy_real_escape_string($conn, ucwords(strtolower($_POST['kategori'])));
 
-                            $update = mysqli_query($conn, "UPDATE kategori SET 
+                            $update = dummy_query($conn, "UPDATE kategori SET 
                                         namakategori = '" . $nama . "'
                                         WHERE idkategori = '" . $k->idkategori . "' ");
                             
@@ -135,7 +135,7 @@
                                         }, 1200);
                                       </script>';
                             } else {
-                                echo '<div class="alert alert-danger mt-4 mb-0">Gagal Memperbarui: ' . mysqli_error($conn) . '</div>';
+                                echo '<div class="alert alert-danger mt-4 mb-0">Gagal Memperbarui: ' . dummy_error($conn) . '</div>';
                             }
                         }
                         ?>

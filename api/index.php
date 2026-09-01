@@ -13,6 +13,9 @@ if (strpos($path, '..') !== false) {
 
 $file = realpath(__DIR__ . '/../' . $path);
 
+// Load dummy data wrapper for all requests
+require_once __DIR__ . '/../dummy_data.php';
+
 if ($file && file_exists($file) && is_file($file)) {
     $ext = pathinfo($file, PATHINFO_EXTENSION);
     if ($ext === 'php') {

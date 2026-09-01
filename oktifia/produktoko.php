@@ -123,9 +123,9 @@
     <div class="container mb-5">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
             <?php
-            $produk = mysqli_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) WHERE status = 1 ORDER BY idproduk DESC");
-            if (mysqli_num_rows($produk) > 0) {
-                while ($row = mysqli_fetch_array($produk)) {
+            $produk = dummy_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) WHERE status = 1 ORDER BY idproduk DESC");
+            if (dummy_num_rows($produk) > 0) {
+                while ($row = dummy_fetch_array($produk)) {
             ?>
             <div class="col">
                 <div class="card card-produk position-relative">

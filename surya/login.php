@@ -77,18 +77,18 @@ body {
 <?php
 if (isset($_POST['submit'])) {
 
-    $user = mysqli_real_escape_string($conn, $_POST['user']);
+    $user = dummy_real_escape_string($conn, $_POST['user']);
     $pass = md5($_POST['pass']);
 
-    $cek = mysqli_query($conn,
+    $cek = dummy_query($conn,
         "SELECT * FROM admin 
          WHERE username='$user' 
          AND password='$pass'
          LIMIT 1"
     );
 
-    if (mysqli_num_rows($cek) === 1) {
-        $d = mysqli_fetch_object($cek);
+    if (dummy_num_rows($cek) === 1) {
+        $d = dummy_fetch_object($cek);
 
         $_SESSION['status_login'] = true;
         $_SESSION['a_global']     = $d;

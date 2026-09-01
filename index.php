@@ -3,9 +3,9 @@
 include "koneksi.php";
 
 // Ambil data statistik kunjungan dari database
-$query = mysqli_query($conn, "SELECT * FROM statistik_toko");
+$query = dummy_query($conn, "SELECT * FROM statistik_toko");
 $stats = [];
-while($row = mysqli_fetch_assoc($query)){
+while($row = dummy_fetch_assoc($query)){
     $stats[$row['nama_toko']] = $row['jumlah_kunjungan'];
 }
 

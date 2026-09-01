@@ -91,8 +91,8 @@
                         <div class="card-body">
                             <h6 class="text-muted text-uppercase small">Total Kategori</h6>
                             <?php 
-                                $kat = mysqli_query($conn, "SELECT * FROM kategori");
-                                $jml_kat = mysqli_num_rows($kat);
+                                $kat = dummy_query($conn, "SELECT * FROM kategori");
+                                $jml_kat = dummy_num_rows($kat);
                             ?>
                             <h2 class="fw-bold text-primary"><?php echo $jml_kat ?> Kategori</h2>
                             <a href="kategori.php" class="btn btn-sm btn-outline-primary mt-2">Lihat Detail</a>
@@ -104,8 +104,8 @@
                         <div class="card-body">
                             <h6 class="text-muted text-uppercase small">Total Produk</h6>
                             <?php 
-                                $prod = mysqli_query($conn, "SELECT * FROM produk");
-                                $jml_prod = mysqli_num_rows($prod);
+                                $prod = dummy_query($conn, "SELECT * FROM produk");
+                                $jml_prod = dummy_num_rows($prod);
                             ?>
                             <h2 class="fw-bold text-success"><?php echo $jml_prod ?> Produk</h2>
                             <a href="produk.php" class="btn btn-sm btn-outline-success mt-2">Lihat Detail</a>

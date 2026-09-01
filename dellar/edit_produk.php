@@ -7,11 +7,11 @@ if ($_SESSION['status_login'] != true) {
 }
 
 // Mengambil data produk berdasarkan ID
-$produk = mysqli_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
-if (mysqli_num_rows($produk) == 0) {
+$produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
+if (dummy_num_rows($produk) == 0) {
     echo '<script>window.location="produk.php"</script>';
 }
-$p = mysqli_fetch_object($produk);
+$p = dummy_fetch_object($produk);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -58,8 +58,8 @@ $p = mysqli_fetch_object($produk);
                             <select class="form-select" name="kategori" required>
                                 <option value="">-- Pilih Kategori Produk --</option>
                                 <?php
-                                $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                while ($r = mysqli_fetch_array($kategori)) {
+                                $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                while ($r = dummy_fetch_array($kategori)) {
                                 ?>
                                 <option value="<?php echo $r['idkategori'] ?>"
                                     <?php echo ($r['idkategori'] == $p->idkategori) ? 'selected' : ''; ?>>
@@ -143,7 +143,7 @@ $p = mysqli_fetch_object($produk);
                             $namagambar = $foto_lama;
                         }
 
-                        $update = mysqli_query($conn, "UPDATE produk SET 
+                        $update = dummy_query($conn, "UPDATE produk SET 
                                     idkategori = '" . $kategori . "',
                                     namaproduk = '" . $nama . "',
                                     harga = '" . $harga . "',
@@ -156,7 +156,7 @@ $p = mysqli_fetch_object($produk);
                             echo '<script>alert("Update Data Berhasil") </script>';
                             echo '<script>window.location="produk.php" </script>';
                         } else {
-                            echo 'Gagal' . mysqli_error($conn);
+                            echo 'Gagal' . dummy_error($conn);
                         }
                     }
                     ?>

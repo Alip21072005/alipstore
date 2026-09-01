@@ -28,11 +28,11 @@
         session_start();
         include 'koneksi.php';
         if (isset($_POST['submit'])) {
-            $user = mysqli_real_escape_string($conn, $_POST['user']);
+            $user = dummy_real_escape_string($conn, $_POST['user']);
             $pass = $_POST['pass'];
-            $cek = mysqli_query($conn, "SELECT * FROM admin WHERE username='$user'");
-            if (mysqli_num_rows($cek) > 0) {
-                $d = mysqli_fetch_object($cek);
+            $cek = dummy_query($conn, "SELECT * FROM admin WHERE username='$user'");
+            if (dummy_num_rows($cek) > 0) {
+                $d = dummy_fetch_object($cek);
                 if (password_verify($pass, $d->password)) {
                     $_SESSION['status_login'] = true;
                     $_SESSION['a_global'] = $d;

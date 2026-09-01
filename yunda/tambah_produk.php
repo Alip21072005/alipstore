@@ -200,8 +200,8 @@
                                     <select class="form-select" name="kategori" required>
                                         <option value="">-- Pilih Kategori --</option>
                                         <?php
-                                        $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                        while ($r = mysqli_fetch_array($kategori)) {
+                                        $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                        while ($r = dummy_fetch_array($kategori)) {
                                         ?>
                                         <option value="<?php echo $r['idkategori'] ?>"><?php echo $r['namakategori'] ?>
                                         </option>
@@ -267,14 +267,14 @@
                     if (!is_dir('image')) { mkdir('image'); }
 
                     if (move_uploaded_file($tmp_name, './image/' . $newname)) {
-                        $insert = mysqli_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
+                        $insert = dummy_query($conn, "INSERT INTO produk (idkategori, namaproduk, harga, deskripsi, gambar, status) VALUES (
                             '".$kategori."', '".$nama."', '".$harga."', '".$deskripsi."', '".$newname."', '".$status."'
                         )");
 
                         if ($insert) {
                             echo '<script>alert("Yay! Menu baru berhasil ditambahkan 💖"); window.location="produk.php";</script>';
                         } else {
-                            echo '<div class="alert alert-danger mt-3">Kesalahan Database: '.mysqli_error($conn).'</div>';
+                            echo '<div class="alert alert-danger mt-3">Kesalahan Database: '.dummy_error($conn).'</div>';
                         }
                     } else {
                         echo '<div class="alert alert-danger mt-3">Gagal mengunggah foto!</div>';

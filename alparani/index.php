@@ -49,9 +49,9 @@
         <h3>Toko Parfum</h3>
         <?php
         include 'koneksi.php';
-        $produk = mysqli_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
-        if (mysqli_num_rows($produk) > 0) {
-            while ($p = mysqli_fetch_array($produk)) {
+        $produk = dummy_query($conn, "SELECT * FROM produk WHERE status = 1 ORDER BY idproduk DESC LIMIT 8");
+        if (dummy_num_rows($produk) > 0) {
+            while ($p = dummy_fetch_array($produk)) {
         ?>
                 <div class="card mt-5 mx-auto d-flex justify-content-center" style="width: 500px;">
                     <img src="image/<?php echo $p['gambar'] ?>" class="card-img-top" alt="Produk Parfum">

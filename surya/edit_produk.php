@@ -6,11 +6,11 @@ if (!isset($_GET['id'])) {
     echo '<script>window.location="produk.php"</script>';
 }
 
-$produk = mysqli_query($conn, "SELECT * FROM produk WHERE idproduk = '".$_GET['id']."'");
-if (mysqli_num_rows($produk) == 0) {
+$produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '".$_GET['id']."'");
+if (dummy_num_rows($produk) == 0) {
     echo '<script>window.location="produk.php"</script>';
 }
-$p = mysqli_fetch_object($produk);
+$p = dummy_fetch_object($produk);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -87,8 +87,8 @@ body { background:#f4f6f9; }
 <select class="form-select mb-3" name="kategori" required>
 <option value="">-- Pilih Kategori --</option>
 <?php
-$kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-while ($k = mysqli_fetch_array($kategori)) {
+$kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+while ($k = dummy_fetch_array($kategori)) {
 ?>
 <option value="<?= $k['idkategori']; ?>"
 <?= ($k['idkategori'] == $p->idkategori) ? 'selected' : ''; ?>>
@@ -153,7 +153,7 @@ if (isset($_POST['submit'])) {
         $namagambar = $gambarLama;
     }
 
-    $update = mysqli_query($conn, "UPDATE produk SET
+    $update = dummy_query($conn, "UPDATE produk SET
         idkategori='$kategori',
         namaproduk='$nama',
         harga='$harga',
@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) {
     if ($update) {
         echo '<script>alert("Produk berhasil diperbarui");window.location="produk.php";</script>';
     } else {
-        echo 'Gagal: '.mysqli_error($conn);
+        echo 'Gagal: '.dummy_error($conn);
     }
 }
 ?>

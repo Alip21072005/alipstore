@@ -53,8 +53,8 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
                                 <select class="form-select" name="kategori" required>
                                     <option value="">-- Pilih Kategori --</option>
                                     <?php
-                                    $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                                    while ($r = mysqli_fetch_array($kategori)) {
+                                    $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                                    while ($r = dummy_fetch_array($kategori)) {
                                         echo '<option value="'.$r['idkategori'].'">'.$r['namakategori'].'</option>';
                                     }
                                     ?>
@@ -106,11 +106,11 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
                         <?php
                         if (isset($_POST['submit'])) {
                             // 1. Ambil data form & Sanitasi (Penting agar tidak error)
-                            $kategori  = mysqli_real_escape_string($conn, $_POST['kategori']);
-                            $nama      = mysqli_real_escape_string($conn, $_POST['nama']);
-                            $harga     = mysqli_real_escape_string($conn, $_POST['harga']);
-                            $deskripsi = mysqli_real_escape_string($conn, $_POST['deskripsi']);
-                            $status    = mysqli_real_escape_string($conn, $_POST['status']);
+                            $kategori  = dummy_real_escape_string($conn, $_POST['kategori']);
+                            $nama      = dummy_real_escape_string($conn, $_POST['nama']);
+                            $harga     = dummy_real_escape_string($conn, $_POST['harga']);
+                            $deskripsi = dummy_real_escape_string($conn, $_POST['deskripsi']);
+                            $status    = dummy_real_escape_string($conn, $_POST['status']);
 
                             // 2. Kelola File Gambar
                             $filename = $_FILES['gambar']['name'];
@@ -140,12 +140,12 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
                                     null
                                 )";
 
-                                $insert = mysqli_query($conn, $query);
+                                $insert = dummy_query($conn, $query);
 
                                 if ($insert) {
                                     echo '<script>alert("Berhasil Menambah Produk!"); window.location="produk.php";</script>';
                                 } else {
-                                    echo '<div class="alert alert-danger mt-3">Gagal Simpan: ' . mysqli_error($conn) . '</div>';
+                                    echo '<div class="alert alert-danger mt-3">Gagal Simpan: ' . dummy_error($conn) . '</div>';
                                 }
                             }
                         }

@@ -9,12 +9,12 @@ if ($_SESSION['status_login'] != true) {
 }
 
 // 1. Hitung Jumlah Kategori
-$query_kategori = mysqli_query($conn, "SELECT * FROM kategori");
-$total_kategori = mysqli_num_rows($query_kategori);
+$query_kategori = dummy_query($conn, "SELECT * FROM kategori");
+$total_kategori = dummy_num_rows($query_kategori);
 
 // 2. Hitung Jumlah Produk
-$query_produk = mysqli_query($conn, "SELECT * FROM produk");
-$total_produk = mysqli_num_rows($query_produk);
+$query_produk = dummy_query($conn, "SELECT * FROM produk");
+$total_produk = dummy_num_rows($query_produk);
 ?>
 
 <!DOCTYPE html>

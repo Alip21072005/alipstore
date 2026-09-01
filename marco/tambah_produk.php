@@ -50,8 +50,8 @@ if ($_SESSION['status_login'] != true) {
                     <select class="form-select mb-3" name="kategori" required>
                         <option value="">-- Pilih Kategori Produk --</option>
                         <?php
-                        $kategori = mysqli_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
-                        while ($r = mysqli_fetch_array($kategori)) {
+                        $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
+                        while ($r = dummy_fetch_array($kategori)) {
                         ?>
                             <option value="<?php echo $r['idkategori']; ?>">
                                 <?php echo $r['namakategori']; ?>
@@ -106,7 +106,7 @@ if ($_SESSION['status_login'] != true) {
 
                         move_uploaded_file($tmp_name, './image/' . $newname);
 
-                        $insert = mysqli_query($conn, "
+                        $insert = dummy_query($conn, "
                             INSERT INTO produk (
                                 idkategori,
                                 namaproduk,
@@ -127,7 +127,7 @@ if ($_SESSION['status_login'] != true) {
                         if ($insert) {
                             echo '<script>alert("Tambah Data Berhasil"); window.location="produk.php";</script>';
                         } else {
-                            echo 'Gagal: ' . mysqli_error($conn);
+                            echo 'Gagal: ' . dummy_error($conn);
                         }
                     }
                 }

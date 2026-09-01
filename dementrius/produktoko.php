@@ -74,9 +74,9 @@ include "koneksi.php";
                         <tbody>
                             <?php
                             $no = 1;
-                            $produk = mysqli_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC");
-                            if (mysqli_num_rows($produk) > 0) {
-                                while ($row = mysqli_fetch_array($produk)) {
+                            $produk = dummy_query($conn, "SELECT * FROM produk LEFT JOIN kategori USING (idkategori) ORDER BY idproduk DESC");
+                            if (dummy_num_rows($produk) > 0) {
+                                while ($row = dummy_fetch_array($produk)) {
                             ?>
                                 <tr>
                                     <td class="ps-4 fw-bold text-muted"><?php echo $no++ ?></td>
