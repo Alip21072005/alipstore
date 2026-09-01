@@ -44,48 +44,49 @@ function dummy_query($conn, $sql) {
         ]);
     }
     
-    // Data Produk (seringkali di-join dengan kategori)
+    // Data Produk - gambar berupa nama file karena template memakai src="image/<?= $row['gambar'] ?>"
+    // File-file ini di-download oleh build.php ke folder image/ masing-masing mahasiswa
     if (strpos($sqlLower, 'produk') !== false && strpos($sqlLower, 'select') !== false) {
         return new DummyResult([
             [
-                'idproduk' => 1, 'namaproduk' => 'Nasi Goreng Spesial', 'harga' => 25000, 
-                'deskripsi' => 'Nasi goreng dengan bumbu rahasia, suwiran ayam, dan topping telur mata sapi.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
+                'idproduk' => 1, 'namaproduk' => 'Nasi Goreng Spesial', 'harga' => 25000,
+                'deskripsi' => 'Nasi goreng dengan bumbu rahasia, suwiran ayam, dan topping telur mata sapi.',
+                'gambar' => 'produk1.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
             ],
             [
-                'idproduk' => 2, 'namaproduk' => 'Es Teh Manis', 'harga' => 5000, 
-                'deskripsi' => 'Es teh manis segar pelepas dahaga.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
+                'idproduk' => 2, 'namaproduk' => 'Es Teh Manis', 'harga' => 5000,
+                'deskripsi' => 'Es teh manis segar pelepas dahaga.',
+                'gambar' => 'produk2.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
             ],
             [
-                'idproduk' => 3, 'namaproduk' => 'Ayam Geprek Sambal Matah', 'harga' => 22000, 
-                'deskripsi' => 'Ayam goreng tepung digeprek dengan sambal matah khas pedas mantap.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
+                'idproduk' => 3, 'namaproduk' => 'Ayam Geprek Sambal Matah', 'harga' => 22000,
+                'deskripsi' => 'Ayam goreng tepung digeprek dengan sambal matah khas pedas mantap.',
+                'gambar' => 'produk3.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
             ],
             [
-                'idproduk' => 4, 'namaproduk' => 'Kopi Susu Gula Aren', 'harga' => 18000, 
-                'deskripsi' => 'Paduan espresso, susu segar, dan gula aren asli Indonesia.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
+                'idproduk' => 4, 'namaproduk' => 'Kopi Susu Gula Aren', 'harga' => 18000,
+                'deskripsi' => 'Paduan espresso, susu segar, dan gula aren asli Indonesia.',
+                'gambar' => 'produk4.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
             ],
             [
-                'idproduk' => 5, 'namaproduk' => 'Mie Goreng Seafood', 'harga' => 28000, 
-                'deskripsi' => 'Mie goreng dengan udang, cumi, dan bumbu rempah pilihan.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
+                'idproduk' => 5, 'namaproduk' => 'Mie Goreng Seafood', 'harga' => 28000,
+                'deskripsi' => 'Mie goreng dengan udang, cumi, dan bumbu rempah pilihan.',
+                'gambar' => 'produk5.jpg', 'namakategori' => 'Makanan Utama', 'status' => 1, 'idkategori' => 1
             ],
             [
-                'idproduk' => 6, 'namaproduk' => 'Jus Mangga Segar', 'harga' => 15000, 
-                'deskripsi' => 'Jus mangga asli tanpa pemanis buatan.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
+                'idproduk' => 6, 'namaproduk' => 'Jus Mangga Segar', 'harga' => 15000,
+                'deskripsi' => 'Jus mangga asli tanpa pemanis buatan.',
+                'gambar' => 'produk6.jpg', 'namakategori' => 'Minuman Segar', 'status' => 1, 'idkategori' => 2
             ],
             [
-                'idproduk' => 7, 'namaproduk' => 'Pisang Bakar Coklat Keju', 'harga' => 12000, 
-                'deskripsi' => 'Pisang bakar manis dengan taburan coklat meses dan keju parut.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Camilan / Dessert', 'status' => 1, 'idkategori' => 3
+                'idproduk' => 7, 'namaproduk' => 'Pisang Bakar Coklat Keju', 'harga' => 12000,
+                'deskripsi' => 'Pisang bakar manis dengan taburan coklat meses dan keju parut.',
+                'gambar' => 'produk7.jpg', 'namakategori' => 'Camilan / Dessert', 'status' => 1, 'idkategori' => 3
             ],
             [
-                'idproduk' => 8, 'namaproduk' => 'Kaos Polos Premium', 'harga' => 50000, 
-                'deskripsi' => 'Kaos polos bahan cotton combed 30s sangat nyaman dipakai.', 
-                'gambar' => '../../dummy_image.jpg', 'namakategori' => 'Pakaian / Aksesoris', 'status' => 1, 'idkategori' => 4
+                'idproduk' => 8, 'namaproduk' => 'Kaos Polos Premium', 'harga' => 50000,
+                'deskripsi' => 'Kaos polos bahan cotton combed 30s sangat nyaman dipakai.',
+                'gambar' => 'produk8.jpg', 'namakategori' => 'Pakaian / Aksesoris', 'status' => 1, 'idkategori' => 4
             ]
         ]);
     }
@@ -162,4 +163,9 @@ function dummy_insert_id($conn=null) { return rand(10, 100); }
 function dummy_affected_rows($conn=null) { return 1; }
 function dummy_close($conn=null) { return true; }
 function dummy_select_db($conn, $dbname) { return true; }
+
+// Helper: gambar menggunakan picsum.photos (tidak membutuhkan API key)
+function picsum_image(string $seed, int $w = 640, int $h = 480): string {
+    return "https://picsum.photos/seed/{$seed}/{$w}/{$h}";
+}
 ?>
