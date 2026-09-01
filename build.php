@@ -98,6 +98,18 @@ foreach ($pages as $page) {
         $content = str_replace("'../" . $asset_dir . "/", "'" . $asset_dir . "/", $content);
     }
 
+    // Fix 3: perbaiki path image untuk subdirectory di Vercel
+    // "./image/" → "/[folder]/image/" untuk subdirectory pages
+    $current_folder = '';
+    if (strpos($page, '/') === 0 && strpos($page, '/', 1) !== false) {
+        $parts = explode('/', trim($page, '/'));
+        $current_folder = $parts[0] ?? '';
+    }
+    if ($current_folder) {
+        $content = str_replace('"./image/', '"' . "/$current_folder/image/", $content);
+        $content = str_replace("'./image/", "'" . "/$current_folder/image/", $content);
+    }
+
     // Fix 3: Perbaiki "image/https://..." → "https://..."  (bila ada sisa URL penuh)
     $content = preg_replace('#(src|href)="[^"]*?(https?://[^"]+)"#', '$1="$2"', $content);
 
