@@ -34,10 +34,8 @@ function dummy_query(object $conn, string $sql)
 
     if (strpos($sqlLower, 'kategori') !== false && strpos($sqlLower, 'join') === false) {
         return new DummyResult([
-            ['idkategori' => 1, 'namakategori' => 'Makanan Utama'],
-            ['idkategori' => 2, 'namakategori' => 'Minuman Segar'],
-            ['idkategori' => 3, 'namakategori' => 'Camilan / Dessert'],
-            ['idkategori' => 4, 'namakategori' => 'Pakaian / Aksesoris']
+            ['idkategori' => 5, 'namakategori' => 'Makanan'],
+            ['idkategori' => 6, 'namakategori' => 'Minuman']
         ]);
     }
 
@@ -45,83 +43,23 @@ function dummy_query(object $conn, string $sql)
         return new DummyResult([
             [
                 'idproduk' => 1,
-                'namaproduk' => 'Nasi Goreng Spesial',
-                'harga' => 25000,
-                'deskripsi' => 'Nasi goreng dengan bumbu rahasia, suwiran ayam, dan topping telur mata sapi.',
-                'gambar' => 'produk1.jpg',
-                'namakategori' => 'Makanan Utama',
+                'namaproduk' => 'Nasi Goreng',
+                'harga' => 10000,
+                'deskripsi' => 'Nasi goreng lezat',
+                'gambar' => 'produk1766018748.jpg',
+                'namakategori' => 'Makanan',
                 'status' => 1,
-                'idkategori' => 1
+                'idkategori' => 5
             ],
             [
                 'idproduk' => 2,
-                'namaproduk' => 'Es Teh Manis',
+                'namaproduk' => 'Es Teh',
                 'harga' => 5000,
-                'deskripsi' => 'Es teh manis segar pelepas dahaga.',
-                'gambar' => 'produk2.jpg',
-                'namakategori' => 'Minuman Segar',
+                'deskripsi' => 'Esteh segar',
+                'gambar' => 'produk1766018779.jpg',
+                'namakategori' => 'Minuman',
                 'status' => 1,
-                'idkategori' => 2
-            ],
-            [
-                'idproduk' => 3,
-                'namaproduk' => 'Ayam Geprek Sambal Matah',
-                'harga' => 22000,
-                'deskripsi' => 'Ayam goreng tepung digeprek dengan sambal matah khas pedas mantap.',
-                'gambar' => 'produk3.jpg',
-                'namakategori' => 'Makanan Utama',
-                'status' => 1,
-                'idkategori' => 1
-            ],
-            [
-                'idproduk' => 4,
-                'namaproduk' => 'Kopi Susu Gula Aren',
-                'harga' => 18000,
-                'deskripsi' => 'Paduan espresso, susu segar, dan gula aren asli Indonesia.',
-                'gambar' => 'produk4.jpg',
-                'namakategori' => 'Minuman Segar',
-                'status' => 1,
-                'idkategori' => 2
-            ],
-            [
-                'idproduk' => 5,
-                'namaproduk' => 'Mie Goreng Seafood',
-                'harga' => 28000,
-                'deskripsi' => 'Mie goreng dengan udang, cumi, dan bumbu rempah pilihan.',
-                'gambar' => 'produk5.jpg',
-                'namakategori' => 'Makanan Utama',
-                'status' => 1,
-                'idkategori' => 1
-            ],
-            [
-                'idproduk' => 6,
-                'namaproduk' => 'Jus Mangga Segar',
-                'harga' => 15000,
-                'deskripsi' => 'Jus mangga asli tanpa pemanis buatan.',
-                'gambar' => 'produk6.jpg',
-                'namakategori' => 'Minuman Segar',
-                'status' => 1,
-                'idkategori' => 2
-            ],
-            [
-                'idproduk' => 7,
-                'namaproduk' => 'Pisang Bakar Coklat Keju',
-                'harga' => 12000,
-                'deskripsi' => 'Pisang bakar manis dengan taburan coklat meses dan keju parut.',
-                'gambar' => 'produk7.jpg',
-                'namakategori' => 'Camilan / Dessert',
-                'status' => 1,
-                'idkategori' => 3
-            ],
-            [
-                'idproduk' => 8,
-                'namaproduk' => 'Kaos Polos Premium',
-                'harga' => 50000,
-                'deskripsi' => 'Kaos polos bahan cotton combed 30s sangat nyaman dipakai.',
-                'gambar' => 'produk8.jpg',
-                'namakategori' => 'Pakaian / Aksesoris',
-                'status' => 1,
-                'idkategori' => 4
+                'idkategori' => 6
             ]
         ]);
     }

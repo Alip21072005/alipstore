@@ -8,21 +8,11 @@
 $out_dir = __DIR__ . '/public';
 if (!is_dir($out_dir)) mkdir($out_dir, 0777, true);
 
-// ---- 1. Daftar gambar dummy (didownload sekali, dipakai semua folder) ----
-// Gambar-gambar ini akan disimpan ke public/<folder>/image/produk<N>.jpg
-$dummy_images = [
-    'produk1.jpg' => 'https://picsum.photos/seed/food1/640/480',
-    'produk2.jpg' => 'https://picsum.photos/seed/drink1/640/480',
-    'produk3.jpg' => 'https://picsum.photos/seed/food2/640/480',
-    'produk4.jpg' => 'https://picsum.photos/seed/coffee/640/480',
-    'produk5.jpg' => 'https://picsum.photos/seed/food3/640/480',
-    'produk6.jpg' => 'https://picsum.photos/seed/juice/640/480',
-    'produk7.jpg' => 'https://picsum.photos/seed/dessert/640/480',
-    'produk8.jpg' => 'https://picsum.photos/seed/fashion/640/480',
-];
+// ---- 1. Tidak perlu download gambar dummy ----
+// Gunakan gambar yang sudah ada di folder lokal
 
 // ---- 2. Helper: salin folder rekursif ----
-$copy_dir = function($src, $dst) use (&$copy_dir) {
+$copy_dir = function ($src, $dst) use (&$copy_dir) {
     if (!is_dir($dst)) mkdir($dst, 0777, true);
     foreach (scandir($src) as $file) {
         if ($file !== '.' && $file !== '..') {
@@ -43,7 +33,9 @@ $descriptorspec = [
 ];
 $process = proc_open(
     "php -S 127.0.0.1:8888 -d auto_prepend_file=" . escapeshellarg(__DIR__ . '/dummy_data.php'),
-    $descriptorspec, $pipes, __DIR__
+    $descriptorspec,
+    $pipes,
+    __DIR__
 );
 sleep(3);
 
@@ -71,20 +63,10 @@ foreach ($folders as $folder) {
     $img_dst = $folder_pub . '/image';
     if (is_dir($img_src)) {
         $copy_dir($img_src, $img_dst);
+        echo "  Copied images from $folder/image/\n";
     } else {
         if (!is_dir($img_dst)) mkdir($img_dst, 0777, true);
-    }
-
-    // c) Download gambar dummy ke folder image/ (hanya jika belum ada)
-    foreach ($dummy_images as $fname => $url) {
-        $dest_file = $img_dst . '/' . $fname;
-        if (!file_exists($dest_file)) {
-            $img_data = @file_get_contents($url);
-            if ($img_data) {
-                file_put_contents($dest_file, $img_data);
-                echo "  Downloaded $fname for $folder\n";
-            }
-        }
+        echo "  Created empty image folder for $folder\n";
     }
 
     // d) Tambahkan halaman ke daftar build
@@ -133,4 +115,3 @@ if (file_exists(__DIR__ . '/dummy_image.jpg')) {
 
 echo "\nStatic build complete!\n";
 proc_terminate($process);
-?>
