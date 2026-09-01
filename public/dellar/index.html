@@ -1,2 +1,292 @@
-<br />
-<b>Parse error</b>:  Unclosed '{' on line 8 in <b>D:\code\toko-sistem-informasi-dehasen\dummy_data.html</b> on line <b>172</b><br />
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Katalog Produk | Della</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+    /* Agar footer tetap di bawah meskipun konten sedikit */
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: #f8f9fa;
+    }
+
+    .main-content {
+        flex: 1 0 auto;
+        /* Mendorong footer ke bawah */
+    }
+
+    /* Styling Kartu Produk */
+    .img-katalog {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+    }
+
+    .card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .harga {
+        color: #0d6efd;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand {
+        letter-spacing: 1px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm">
+                <div class="container">
+                    <a class="navbar-brand fw-bold" href="#"><i class="bi bi-shop"></i> Della</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="./">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="produktoko.html">Produk</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Admin Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="section mt-5 pb-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h3 class="fw-bold">Makanan & Minuman Terlaris</h3>
+                    <p class="text-muted">Pilih menu favoritmu dan pesan langsung via WhatsApp</p>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk1.jpg" target="_blank">
+                                <img src="image/produk1.jpg" class="card-img-top img-katalog"
+                                    alt="Nasi Goreng Spesial">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Nasi Goreng Spesial</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Nasi goreng dengan bumbu rahasia, suwiran ayam, dan topping ...                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        25.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Nasi+Goreng+Spesial"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk2.jpg" target="_blank">
+                                <img src="image/produk2.jpg" class="card-img-top img-katalog"
+                                    alt="Es Teh Manis">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Es Teh Manis</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Es teh manis segar pelepas dahaga.                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        5.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Es+Teh+Manis"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk3.jpg" target="_blank">
+                                <img src="image/produk3.jpg" class="card-img-top img-katalog"
+                                    alt="Ayam Geprek Sambal Matah">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Ayam Geprek Sambal Matah</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Ayam goreng tepung digeprek dengan sambal matah khas pedas m...                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        22.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Ayam+Geprek+Sambal+Matah"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk4.jpg" target="_blank">
+                                <img src="image/produk4.jpg" class="card-img-top img-katalog"
+                                    alt="Kopi Susu Gula Aren">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Kopi Susu Gula Aren</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Paduan espresso, susu segar, dan gula aren asli Indonesia.                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        18.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Kopi+Susu+Gula+Aren"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk5.jpg" target="_blank">
+                                <img src="image/produk5.jpg" class="card-img-top img-katalog"
+                                    alt="Mie Goreng Seafood">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Mie Goreng Seafood</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Mie goreng dengan udang, cumi, dan bumbu rempah pilihan.                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        28.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Mie+Goreng+Seafood"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk6.jpg" target="_blank">
+                                <img src="image/produk6.jpg" class="card-img-top img-katalog"
+                                    alt="Jus Mangga Segar">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Jus Mangga Segar</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Jus mangga asli tanpa pemanis buatan.                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        15.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Jus+Mangga+Segar"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk7.jpg" target="_blank">
+                                <img src="image/produk7.jpg" class="card-img-top img-katalog"
+                                    alt="Pisang Bakar Coklat Keju">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Pisang Bakar Coklat Keju</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Pisang bakar manis dengan taburan coklat meses dan keju paru...                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        12.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Pisang+Bakar+Coklat+Keju"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <a href="image/produk8.jpg" target="_blank">
+                                <img src="image/produk8.jpg" class="card-img-top img-katalog"
+                                    alt="Kaos Polos Premium">
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-1">Kaos Polos Premium</h5>
+                                <p class="card-text text-muted flex-grow-1 mb-3" style="font-size: 0.85rem;">
+                                    Kaos polos bahan cotton combed 30s sangat nyaman dipakai.                                </p>
+                                <div class="mt-auto">
+                                    <p class="harga mb-3 text-primary">Rp
+                                        50.000</p>
+                                    <a href="https://wa.me/685758170118?text=Halo Della, saya ingin memesan produk: Kaos+Polos+Premium"
+                                        target="_blank" class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-whatsapp"></i> Beli Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-primary text-light py-4 text-center mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-1 fw-bold">Della</p>
+                    <small class="opacity-75">Copyright &copy; 2025 - Semua Hak Dilindungi.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

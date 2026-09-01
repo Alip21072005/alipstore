@@ -1,2 +1,212 @@
-<br />
-<b>Parse error</b>:  Unclosed '{' on line 8 in <b>D:\code\toko-sistem-informasi-dehasen\dummy_data.html</b> on line <b>172</b><br />
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produk | Store Shopi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .product-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .nama {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .harga {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #eafa5eff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Store Shopi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produktoko.html">Data Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="fw-bold">Tokoh Boneka Lucu</h3>
+                <p class="text-muted">Pilihan favorit pelanggan Tokoh Kito</p>
+            </div>
+
+            <div class="row g-4">
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk1.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Nasi Goreng Spesial</p>
+                                    <p class="text-muted small flex-grow-1">Nasi goreng dengan bumbu rahasia, suwiran ayam, dan topping telur mata sapi.</p>
+                                    <p class="harga">Rp 25,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk2.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Es Teh Manis</p>
+                                    <p class="text-muted small flex-grow-1">Es teh manis segar pelepas dahaga.</p>
+                                    <p class="harga">Rp 5,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk3.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Ayam Geprek Sambal Matah</p>
+                                    <p class="text-muted small flex-grow-1">Ayam goreng tepung digeprek dengan sambal matah khas pedas mantap.</p>
+                                    <p class="harga">Rp 22,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk4.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Kopi Susu Gula Aren</p>
+                                    <p class="text-muted small flex-grow-1">Paduan espresso, susu segar, dan gula aren asli Indonesia.</p>
+                                    <p class="harga">Rp 18,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk5.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Mie Goreng Seafood</p>
+                                    <p class="text-muted small flex-grow-1">Mie goreng dengan udang, cumi, dan bumbu rempah pilihan.</p>
+                                    <p class="harga">Rp 28,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk6.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Jus Mangga Segar</p>
+                                    <p class="text-muted small flex-grow-1">Jus mangga asli tanpa pemanis buatan.</p>
+                                    <p class="harga">Rp 15,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk7.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Pisang Bakar Coklat Keju</p>
+                                    <p class="text-muted small flex-grow-1">Pisang bakar manis dengan taburan coklat meses dan keju parut.</p>
+                                    <p class="harga">Rp 12,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card product-card h-100">
+                                <img src="image/produk8.jpg" class="product-img" alt="Produk">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="nama">Kaos Polos Premium</p>
+                                    <p class="text-muted small flex-grow-1">Kaos polos bahan cotton combed 30s sangat nyaman dipakai.</p>
+                                    <p class="harga">Rp 50,000</p>
+                                    <a href="https://wa.me/6285357617815" target="_blank" class="btn btn-success w-100">
+                                        Beli via WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="bg-primary text-light p-3 text-center">
+            <small>Copyright &copy; 2025 - Store Shopi</small>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
