@@ -40,28 +40,69 @@ function dummy_query(object $conn, string $sql)
     }
 
     if (strpos($sqlLower, 'produk') !== false && strpos($sqlLower, 'select') !== false) {
-        return new DummyResult([
-            [
+        // Dynamic data based on folder that has images
+        $image_folder = __DIR__;
+        if (isset($_SERVER['REQUEST_URI'])) {
+            $uri = $_SERVER['REQUEST_URI'];
+            if (preg_match('#/([^/]+)/#', $uri, $matches)) {
+                $folder = $matches[1];
+                $image_folder = __DIR__ . '/' . $folder . '/image';
+            }
+        }
+
+        // Check if folder has images and get the first available
+        $available_images = [];
+        if (is_dir($image_folder)) {
+            $files = scandir($image_folder);
+            foreach ($files as $file) {
+                if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $file)) {
+                    $available_images[] = $file;
+                }
+            }
+        }
+
+        // Fallback to alipmaulana images if no images found
+        if (empty($available_images)) {
+            $alipmaulana_images = __DIR__ . '/alipmaulana/image';
+            if (is_dir($alipmaulana_images)) {
+                $files = scandir($alipmaulana_images);
+                foreach ($files as $file) {
+                    if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $file)) {
+                        $available_images[] = $file;
+                    }
+                }
+            }
+        }
+
+        // Build product data based on available images
+        $products = [];
+        $image_count = count($available_images);
+        if ($image_count >= 1) {
+            $products[] = [
                 'idproduk' => 1,
                 'namaproduk' => 'Nasi Goreng',
                 'harga' => 10000,
                 'deskripsi' => 'Nasi goreng lezat',
-                'gambar' => 'produk1766018748.jpg',
+                'gambar' => $available_images[0],
                 'namakategori' => 'Makanan',
                 'status' => 1,
                 'idkategori' => 5
-            ],
-            [
+            ];
+        }
+        if ($image_count >= 2) {
+            $products[] = [
                 'idproduk' => 2,
                 'namaproduk' => 'Es Teh',
                 'harga' => 5000,
                 'deskripsi' => 'Esteh segar',
-                'gambar' => 'produk1766018779.jpg',
+                'gambar' => $available_images[1],
                 'namakategori' => 'Minuman',
                 'status' => 1,
                 'idkategori' => 6
-            ]
-        ]);
+            ];
+        }
+
+        return new DummyResult($products);
     }
 
     if (strpos($sqlLower, 'admin') !== false || strpos($sqlLower, 'user') !== false) {

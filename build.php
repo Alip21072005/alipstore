@@ -65,8 +65,15 @@ foreach ($folders as $folder) {
         $copy_dir($img_src, $img_dst);
         echo "  Copied images from $folder/image/\n";
     } else {
+        // Use alipmaulana images as fallback for folders without images
         if (!is_dir($img_dst)) mkdir($img_dst, 0777, true);
-        echo "  Created empty image folder for $folder\n";
+        $fallback_src = __DIR__ . '/alipmaulana/image';
+        if (is_dir($fallback_src)) {
+            $copy_dir($fallback_src, $img_dst);
+            echo "  Copied fallback images to $folder/image/\n";
+        } else {
+            echo "  Created empty image folder for $folder\n";
+        }
     }
 
     // d) Tambahkan halaman ke daftar build
@@ -100,14 +107,19 @@ foreach ($pages as $page) {
 
     // Fix 3: perbaiki path image untuk subdirectory di Vercel
     // "./image/" → "/[folder]/image/" untuk subdirectory pages
+    // "image/" → "/[folder]/image/" untuk semua gambar links
     $current_folder = '';
     if (strpos($page, '/') === 0 && strpos($page, '/', 1) !== false) {
         $parts = explode('/', trim($page, '/'));
         $current_folder = $parts[0] ?? '';
     }
     if ($current_folder) {
+        // Fix relative paths
         $content = str_replace('"./image/', '"' . "/$current_folder/image/", $content);
         $content = str_replace("'./image/", "'" . "/$current_folder/image/", $content);
+        // Fix absolute paths without folder
+        $content = str_replace('"image/', '"' . "/$current_folder/image/", $content);
+        $content = str_replace("'image/", "'" . "/$current_folder/image/", $content);
     }
 
     // Fix 3: Perbaiki "image/https://..." → "https://..."  (bila ada sisa URL penuh)
