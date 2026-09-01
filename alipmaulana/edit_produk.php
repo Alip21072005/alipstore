@@ -1,16 +1,16 @@
 <?php
-    include "koneksi.php";
-    session_start();
+include "koneksi.php";
+session_start();
 
-    if ($_SESSION['status_login'] != true) {
-        echo '<script>window.location="login.php"</script>';
-    }
+if ($_SESSION['status_login'] != true) {
+    echo '<script>window.location="login.php"</script>';
+}
 
-    $produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
-    if(dummy_num_rows($produk) == 0){
-        echo '<script>window.location="produk.php"</script>';
-    }
-    $p = dummy_fetch_object($produk);
+$produk = dummy_query($conn, "SELECT * FROM produk WHERE idproduk = '" . $_GET['id'] . "'");
+if (dummy_num_rows($produk) == 0) {
+    echo '<script>window.location="produk.php"</script>';
+}
+$p = dummy_fetch_object($produk);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -25,45 +25,45 @@
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
     <style>
-    html,
-    body {
-        height: 100%;
-    }
+        html,
+        body {
+            height: 100%;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f4f7f6;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+        }
 
-    main {
-        flex: 1 0 auto;
-    }
+        main {
+            flex: 1 0 auto;
+        }
 
-    .card {
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
 
-    .current-img {
-        border-radius: 15px;
-        border: 3px solid #fff;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+        .current-img {
+            border-radius: 15px;
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .form-label {
-        font-weight: 600;
-        color: #444;
-    }
+        .form-label {
+            font-weight: 600;
+            color: #444;
+        }
 
-    .btn-update {
-        border-radius: 10px;
-        padding: 12px;
-        font-weight: 600;
-        transition: all 0.3s;
-    }
+        .btn-update {
+            border-radius: 10px;
+            padding: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
     </style>
 </head>
 
@@ -105,7 +105,7 @@
                                         $kategori = dummy_query($conn, "SELECT * FROM kategori ORDER BY idkategori DESC");
                                         while ($r = dummy_fetch_array($kategori)) {
                                             $selected = ($r['idkategori'] == $p->idkategori) ? 'selected' : '';
-                                            echo "<option value='".$r['idkategori']."' $selected>".$r['namakategori']."</option>";
+                                            echo "<option value='" . $r['idkategori'] . "' $selected>" . $r['namakategori'] . "</option>";
                                         }
                                         ?>
                                     </select>
@@ -125,8 +125,9 @@
 
                             <div class="mb-4 text-center p-3 bg-light rounded-4">
                                 <label class="form-label d-block mb-3">Foto Produk Saat Ini</label>
-                                <img src="image/<?php echo $p->gambar ?>" width="150px" class="current-img mb-3"
-                                    id="preview">
+                                <img src="./image/<?php echo $p->gambar ?>" width="150px" class="current-img mb-3"
+                                    id="preview"
+                                    onerror="this.src='https://via.placeholder.com/150?text=No+Img';this.onerror=null;">
                                 <input type="hidden" name="foto_lama" value="<?php echo $p->gambar ?>">
                                 <input type="file" name="gambar_baru" class="form-control"
                                     onchange="previewImage(event)">
@@ -176,7 +177,7 @@
                                     echo '<div class="alert alert-danger mt-3">Format file tidak diizinkan!</div>';
                                 } else {
                                     // Hapus foto lama jika ada
-                                    if(file_exists('./image/' . $foto_lama)) {
+                                    if (file_exists('./image/' . $foto_lama)) {
                                         unlink('./image/' . $foto_lama);
                                     }
                                     move_uploaded_file($tmp_name, './image/' . $newname);
@@ -193,7 +194,7 @@
                                 deskripsi  = '$deskripsi',
                                 gambar     = '$namagambar',
                                 status     = '$status'
-                                WHERE idproduk = '".$p->idproduk."'");
+                                WHERE idproduk = '" . $p->idproduk . "'");
 
                             if ($update) {
                                 echo '<script>alert("Data berhasil diperbarui!"); window.location="produk.php";</script>';
@@ -213,16 +214,16 @@
     </footer>
 
     <script>
-    CKEDITOR.replace('deskripsi');
+        CKEDITOR.replace('deskripsi');
 
-    function previewImage(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('preview');
-            output.src = reader.result;
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('preview');
+                output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
         }
-        reader.readAsDataURL(event.target.files[0]);
-    }
     </script>
 </body>
 
