@@ -184,7 +184,7 @@ $daftar_toko = [
                             <i class="bi <?php echo $toko['icon']; ?>"></i>
                         </div>
                         <h5 class="fw-800 mb-4"><?php echo $toko['nama']; ?></h5>
-                        <a href="visit.php?toko=<?php echo $toko['id']; ?>" class="btn btn-modern">
+                        <a href="<?php echo $toko['id']; ?>/index.php" class="btn btn-modern">
                             Jelajahi Toko <i class="bi bi-arrow-right-short"></i>
                         </a>
                     </div>

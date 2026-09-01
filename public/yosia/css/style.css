@@ -1,0 +1,158 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #624c66, #dcdcdc, #ffffff);
+    color: #222;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+    background: #0d0d10 !important; /* hitam */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9b5de5 !important; /* ungu */
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ddd !important;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #9b5de5 !important;
+}
+
+/* =====================
+   PRODUK GRID
+===================== */
+.row {
+    padding: 0 20px;
+}
+
+/* =====================
+   CARD PRODUK
+===================== */
+.product-card {
+    background: #ffffff;
+    border-radius: 22px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 65px rgba(155,93,229,0.25);
+}
+
+/* =====================
+   BADGE HARGA
+===================== */
+.price-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #9b5de5, #6a00f4);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 30px;
+    z-index: 10;
+    box-shadow: 0 6px 20px rgba(155,93,229,0.5);
+}
+
+/* =====================
+   GAMBAR PRODUK
+===================== */
+.product-card img {
+    height: 190px;
+    width: 100%;
+    object-fit: contain;
+    background: #f7f7fb;
+    padding: 15px;
+}
+
+/* =====================
+   CARD BODY
+===================== */
+.product-card .card-body {
+    padding: 22px;
+    text-align: center;
+}
+
+.product-card .nama {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.product-card .deskripsi {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* =====================
+   BUTTON BELI
+===================== */
+.btn-pesan {
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(135deg, #9b5de5, #6a00f4);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 12px 0;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-pesan:hover {
+    background: linear-gradient(135deg, #6a00f4, #9b5de5);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    background: #0d0d10;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 160px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+}

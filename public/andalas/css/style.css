@@ -1,0 +1,113 @@
+/* ===============================
+   TEMA KALEM - COFFEE KITO
+   =============================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ee; /* cream lembut */
+    color: #3e3e3e;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #6f4e37 !important; /* coffee brown */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 50px 0;
+}
+
+/* ===== JUDUL ===== */
+h3 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #5a3e2b;
+    margin-bottom: 40px;
+}
+
+/* ===== CARD PRODUK ===== */
+.card {
+    border: none;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===== ISI CARD ===== */
+.card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-body h6,
+.nama {
+    font-weight: 700;
+    font-size: 15px;
+    color: #3e3e3e;
+    margin-bottom: 10px;
+}
+
+.deskripsi {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.harga {
+    font-size: 15px;
+    font-weight: 700;
+    color: #6f4e37;
+    margin-bottom: 15px;
+}
+
+/* ===== BUTTON ===== */
+.btn-secondary {
+    background-color: #d8cfc4;
+    border: none;
+    color: #3e3e3e;
+    border-radius: 25px;
+    padding: 8px 22px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #6f4e37;
+    color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #6f4e37;
+    color: #ffffff;
+    margin-top: 60px;
+}
+
+footer small {
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .card img {
+        height: 180px;
+    }
+}
