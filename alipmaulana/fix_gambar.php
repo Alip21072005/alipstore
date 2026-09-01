@@ -12,4 +12,3 @@ if (dummy_query($conn, $query1) && dummy_query($conn, $query2)) {
 } else {
     echo "Gagal memperbarui database: " . dummy_error($conn);
 }
-?>
