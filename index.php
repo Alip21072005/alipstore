@@ -50,7 +50,7 @@ $daftar_toko = [
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toko Sistem Informasi | Universitas Dehasen</title>
+    <title>Project Wirausaha Digital | Universitas Dehasen</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
         rel="stylesheet">
@@ -150,19 +150,14 @@ $daftar_toko = [
         style="background: rgba(13, 110, 253, 0.95); backdrop-filter: blur(10px);">
         <div class="container">
             <a class="navbar-brand fw-800 fs-4" href="#">
-                <i class="bi bi-cpu-fill me-2"></i>TOKO SISTEM INFORMASI
+                <i class="bi bi-cpu-fill me-2"></i>PROJECT WIRAUSAHA DIGITAL
             </a>
-            <div class="d-flex gap-2">
-                <a href="/phpmyadmin/" target="_blank" class="btn btn-light btn-sm rounded-pill px-3 fw-bold">
-                    <i class="bi bi-database-fill-gear me-1"></i> Admin
-                </a>
-            </div>
         </div>
     </nav>
 
     <div class="hero-section text-center">
         <div class="container mt-4" data-aos="fade-down">
-            <h1 class="display-3 fw-800 mb-2">UMKM DIGITAL</h1>
+            <h1 class="display-3 fw-800 mb-2">Project Wirausaha Digital</h1>
             <p class="lead opacity-75 fw-bold">Kreativitas Mahasiswa Sistem Informasi Universitas Dehasen</p>
         </div>
     </div>
