@@ -15,7 +15,7 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tambah Kategori | Tokoh Buah Being Muhammad Online</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body class="bg-light">
@@ -115,6 +115,6 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
     </div>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

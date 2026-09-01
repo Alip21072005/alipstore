@@ -11,7 +11,7 @@ $jml_kategori = dummy_num_rows(dummy_query($conn, "SELECT * FROM kategori"));
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard Admin | Kedai Kito</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
@@ -82,6 +82,6 @@ $jml_kategori = dummy_num_rows(dummy_query($conn, "SELECT * FROM kategori"));
     <small>&copy; 2025 Kedai Kito Online</small>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ include "koneksi.php";
     <title>Data Kategori | Gabutin CoffeShopOnline</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <!-- Custom Style -->
     <style>
@@ -153,7 +153,7 @@ include "koneksi.php";
         <small>Copyright &copy; 2025 - Gabutin CoffeShop</small>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
