@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Admin | Kedai Kito</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Masuk Admin | ALIP MART</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <style>
     body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #0d6efd 0%, #003d99 100%);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: linear-gradient(135deg, #102a43 0%, #0f766e 100%);
         height: 100vh;
         display: flex;
         align-items: center;
@@ -38,7 +38,7 @@
 
     .card-header h4 {
         font-weight: 600;
-        color: #0d6efd;
+        color: #0f766e;
         margin-bottom: 5px;
     }
 
@@ -53,7 +53,7 @@
     }
 
     .btn-login {
-        background-color: #0d6efd;
+        background-color: #0f766e;
         border: none;
         border-radius: 10px;
         padding: 12px;
@@ -62,13 +62,13 @@
     }
 
     .btn-login:hover {
-        background-color: #0056b3;
+        background-color: #0b5e57;
         transform: translateY(-2px);
     }
 
     .icon-box {
         font-size: 3rem;
-        color: #0d6efd;
+        color: #0f766e;
         margin-bottom: 10px;
     }
     </style>
@@ -81,8 +81,9 @@
             <div class="icon-box">
                 <i class="bi bi-person-circle"></i>
             </div>
-            <h4>ADMIN LOGIN</h4>
-            <p class="text-muted small">Silakan masuk ke akun Anda</p>
+            <p class="small fw-bold mb-1" style="letter-spacing:.14em;color:#0f766e;">ALIP MART</p>
+            <h4>Masuk Admin</h4>
+            <p class="text-muted small">Kelola toko Anda dengan aman.</p>
         </div>
         <div class="card-body p-4">
             <form action="" method="POST">
@@ -105,12 +106,12 @@
                     </div>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary btn-login w-100 shadow-sm">
-                    LOG IN
+                    Masuk ke Dashboard
                 </button>
             </form>
         </div>
         <div class="card-footer bg-light border-top-0 py-3 text-center">
-            <small class="text-muted">&copy; 2023 Kedai Kito Online</small>
+            <small class="text-muted">&copy; 2023 ALIP MART</small>
         </div>
     </div>
 

@@ -1,0 +1,96 @@
+:root {
+    --alip-navy: #102a43;
+    --alip-teal: #0f766e;
+    --alip-mint: #ccfbf1;
+    --alip-ink: #243b53;
+    --alip-muted: #627d98;
+    --alip-surface: #f5f8fa;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--alip-surface);
+    color: var(--alip-ink);
+}
+
+.alip-navbar {
+    background: rgba(16, 42, 67, .96);
+    box-shadow: 0 8px 30px rgba(16, 42, 67, .14);
+}
+
+.brand-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    margin-right: .55rem;
+    border-radius: 10px;
+    background: var(--alip-teal);
+    color: #fff;
+}
+
+.brand-name { letter-spacing: .08em; }
+.nav-cta { border-radius: 999px; }
+
+.alip-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 7.5rem 0 6.5rem;
+    color: #fff;
+    background: linear-gradient(110deg, rgba(16,42,67,.96), rgba(15,118,110,.76)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+
+.alip-hero::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    bottom: -12rem;
+    width: 33rem;
+    height: 33rem;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 680px; }
+.eyebrow { color: var(--alip-mint); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.hero-title { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -.055em; line-height: 1.05; }
+.hero-copy { max-width: 560px; color: rgba(255,255,255,.82); font-size: 1.08rem; }
+.btn-alip { padding: .8rem 1.25rem; border: 0; border-radius: .75rem; background: #fff; color: var(--alip-navy); font-weight: 800; }
+.btn-alip:hover { background: var(--alip-mint); color: var(--alip-navy); }
+.btn-alip-outline { padding: .8rem 1.25rem; border: 1px solid rgba(255,255,255,.5); border-radius: .75rem; color: #fff; font-weight: 700; }
+.btn-alip-outline:hover { border-color: #fff; background: rgba(255,255,255,.12); color: #fff; }
+
+.trust-strip { position: relative; z-index: 2; margin-top: -2rem; }
+.trust-card { background: #fff; border-radius: 1rem; box-shadow: 0 14px 35px rgba(16,42,67,.10); }
+.trust-icon { color: var(--alip-teal); font-size: 1.35rem; }
+.trust-title { font-size: .88rem; font-weight: 800; margin: 0; }
+.trust-text { color: var(--alip-muted); font-size: .75rem; margin: 0; }
+
+.section-label { color: var(--alip-teal); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.section-title { color: var(--alip-navy); font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 800; letter-spacing: -.035em; }
+.catalog-link { color: var(--alip-teal); font-weight: 800; }
+
+.card-produk { border: 1px solid #e4edf4; border-radius: 1rem; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; height: 100%; box-shadow: none; }
+.card-produk:hover { transform: translateY(-6px); box-shadow: 0 18px 35px rgba(16,42,67,.12); }
+.card-produk img { height: 220px; object-fit: cover; }
+.badge-kategori { top: 14px; left: 14px; background: rgba(16,42,67,.9); padding: .4rem .7rem; border-radius: 999px; font-size: .68rem; font-weight: 700; letter-spacing: .03em; }
+.product-title { color: var(--alip-navy); font-weight: 800; }
+.harga { color: var(--alip-teal); font-size: 1.1rem; font-weight: 800; }
+.btn-beli { border-radius: .7rem; background: var(--alip-teal); border: 0; font-weight: 800; padding: .7rem; }
+.btn-beli:hover { background: #0b5e57; color: #fff; }
+
+.catalog-header { padding: 4.75rem 0 4rem; background: linear-gradient(135deg, var(--alip-navy), #164e63); color: #fff; }
+.catalog-header h1 { font-weight: 800; letter-spacing: -.04em; }
+.catalog-header p { color: rgba(255,255,255,.76); }
+
+.alip-footer { background: var(--alip-navy); color: #d9e2ec; }
+.alip-footer h5 { color: #fff; font-weight: 800; }
+.alip-footer a { color: #d9e2ec; }
+.alip-footer a:hover { color: var(--alip-mint); }
+.footer-note { color: #9fb3c8; }
+
+@media (max-width: 767.98px) {
+    .alip-hero { padding: 5rem 0 5.5rem; }
+    .trust-strip { margin-top: -1.25rem; }
+    .trust-card .border-end { border-right: 0 !important; border-bottom: 1px solid #e4edf4; }
+}

@@ -23,8 +23,8 @@ $total_produk = dummy_num_rows($query_produk);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | Kedai Kito Online</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Dashboard | ALIP MART</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
@@ -37,8 +37,8 @@ $total_produk = dummy_num_rows($query_produk);
     body {
         display: flex;
         flex-direction: column;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f8f9fa;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f5f8fa;
     }
 
     main {
@@ -50,7 +50,7 @@ $total_produk = dummy_num_rows($query_produk);
     }
 
     .welcome-section {
-        background: linear-gradient(135deg, #0d6efd 0%, #0099ff 100%);
+        background: linear-gradient(135deg, #102a43 0%, #0f766e 100%);
         color: white;
         padding: 3rem;
         border-radius: 1.5rem;
@@ -72,9 +72,9 @@ $total_produk = dummy_num_rows($query_produk);
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background:#102a43;">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#"><i class="bi bi-shop me-2"></i>Kedai Kito</a>
+                <a class="navbar-brand fw-bold" href="./"><i class="bi bi-bag-check me-2"></i>ALIP MART</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -96,13 +96,13 @@ $total_produk = dummy_num_rows($query_produk);
     <main class="container my-5">
         <div class="welcome-section shadow-sm mb-4">
             <h2 class="fw-bold">Selamat Datang👋</h2>
-            <p class="mb-0">Senang melihat Anda kembali. Berikut ringkasan toko Anda hari ini.</p>
+            <p class="mb-0">Pantau katalog dan kelola informasi ALIP MART dari satu tempat.</p>
         </div>
 
         <div class="row g-4 text-center">
             <div class="col-md-6">
                 <div class="card card-stat shadow-sm p-5">
-                    <i class="bi bi-tags text-primary fs-1 mb-2"></i>
+                    <i class="bi bi-tags fs-1 mb-2" style="color:#0f766e;"></i>
                     <h5 class="text-muted">Total Kategori</h5>
                     <h2 class="fw-bold display-4"><?php echo $total_kategori; ?></h2>
                     <a href="kategori.php" class="btn btn-outline-primary btn-sm mt-3 mx-auto"
@@ -112,10 +112,10 @@ $total_produk = dummy_num_rows($query_produk);
 
             <div class="col-md-6">
                 <div class="card card-stat shadow-sm p-5">
-                    <i class="bi bi-box-seam text-success fs-1 mb-2"></i>
+                    <i class="bi bi-box-seam fs-1 mb-2" style="color:#0f766e;"></i>
                     <h5 class="text-muted">Total Produk</h5>
                     <h2 class="fw-bold display-4"><?php echo $total_produk; ?></h2>
-                    <a href="produk.php" class="btn btn-outline-success btn-sm mt-3 mx-auto"
+                    <a href="produk.php" class="btn btn-outline-primary btn-sm mt-3 mx-auto"
                         style="max-width: 150px;">Lihat Detail</a>
                 </div>
             </div>
@@ -124,7 +124,7 @@ $total_produk = dummy_num_rows($query_produk);
 
     <footer class="bg-white border-top py-4 shadow-sm">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2023 - <strong>Kedai Kito Online</strong>. All rights
+            <small class="text-muted">Copyright &copy; 2023 - <strong>ALIP MART</strong>. All rights
                 reserved.</small>
         </div>
     </footer>
