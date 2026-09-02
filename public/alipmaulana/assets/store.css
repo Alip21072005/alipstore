@@ -11,6 +11,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: var(--alip-surface);
     color: var(--alip-ink);
+    min-width: 320px;
 }
 
 .alip-navbar {
@@ -30,6 +31,8 @@ body {
 }
 
 .brand-name { letter-spacing: .08em; }
+.navbar .nav-link { font-weight: 700; color: rgba(255,255,255,.76); }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #fff; }
 .nav-cta { border-radius: 999px; }
 
 .alip-hero {
@@ -70,7 +73,7 @@ body {
 .section-title { color: var(--alip-navy); font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 800; letter-spacing: -.035em; }
 .catalog-link { color: var(--alip-teal); font-weight: 800; }
 
-.card-produk { border: 1px solid #e4edf4; border-radius: 1rem; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; height: 100%; box-shadow: none; }
+.card-produk { border: 1px solid #e4edf4; border-radius: 1rem; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; height: 100%; box-shadow: 0 6px 20px rgba(16,42,67,.04); }
 .card-produk:hover { transform: translateY(-6px); box-shadow: 0 18px 35px rgba(16,42,67,.12); }
 .card-produk img { height: 220px; object-fit: cover; }
 .badge-kategori { top: 14px; left: 14px; background: rgba(16,42,67,.9); padding: .4rem .7rem; border-radius: 999px; font-size: .68rem; font-weight: 700; letter-spacing: .03em; }
@@ -79,9 +82,15 @@ body {
 .btn-beli { border-radius: .7rem; background: var(--alip-teal); border: 0; font-weight: 800; padding: .7rem; }
 .btn-beli:hover { background: #0b5e57; color: #fff; }
 
-.catalog-header { padding: 4.75rem 0 4rem; background: linear-gradient(135deg, var(--alip-navy), #164e63); color: #fff; }
+.catalog-header { position: relative; overflow: hidden; padding: 4.75rem 0 4rem; background: linear-gradient(135deg, var(--alip-navy), #164e63); color: #fff; }
+.catalog-header::after { content: ''; position: absolute; width: 22rem; height: 22rem; right: -7rem; top: -12rem; border: 1px solid rgba(204,251,241,.24); border-radius: 50%; }
+.catalog-header .container { position: relative; z-index: 1; }
 .catalog-header h1 { font-weight: 800; letter-spacing: -.04em; }
 .catalog-header p { color: rgba(255,255,255,.76); }
+
+.empty-products { padding: 4rem 1.5rem; border: 1px dashed #b8c7d5; border-radius: 1rem; background: #fff; color: var(--alip-muted); }
+.empty-products i { display: block; margin-bottom: 1rem; color: var(--alip-teal); font-size: 2.5rem; }
+.empty-products h2 { color: var(--alip-navy); font-size: 1.35rem; font-weight: 800; }
 
 .alip-footer { background: var(--alip-navy); color: #d9e2ec; }
 .alip-footer h5 { color: #fff; font-weight: 800; }
@@ -93,4 +102,6 @@ body {
     .alip-hero { padding: 5rem 0 5.5rem; }
     .trust-strip { margin-top: -1.25rem; }
     .trust-card .border-end { border-right: 0 !important; border-bottom: 1px solid #e4edf4; }
+    .catalog-header { padding: 3.75rem 0 3.25rem; }
+    .catalog-header h1 { font-size: 2.1rem; }
 }

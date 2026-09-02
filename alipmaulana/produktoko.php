@@ -23,10 +23,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="produktoko.php">Produk</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3 px-4"
-                                href="login.php">Masuk Admin</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +66,15 @@
                         </div>
                     </div>
             <?php }
-            } ?>
+            } else { ?>
+                <div class="col-12">
+                    <div class="empty-products text-center">
+                        <i class="bi bi-bag-heart"></i>
+                        <h2>Produk segera hadir</h2>
+                        <p class="mb-0">Kami sedang menyiapkan pilihan terbaik untuk Anda. Silakan hubungi kami untuk informasi lebih lanjut.</p>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </main>
 
@@ -81,10 +87,9 @@
                 </div>
                 <div class="col-md-2 col-lg-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold small">Navigasi</h5>
-                    <p class="small"><a href="./" class="text-white text-decoration-none">Home</a></p>
+                    <p class="small"><a href="index.php" class="text-white text-decoration-none">Home</a></p>
                     <p class="small"><a href="produktoko.php" class="text-white text-decoration-none">Semua Produk</a>
                     </p>
-                    <p class="small"><a href="login.php" class="text-white text-decoration-none">Admin Login</a></p>
                 </div>
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold small">Kontak Kami</h5>

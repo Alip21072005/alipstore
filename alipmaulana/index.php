@@ -24,8 +24,6 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="./">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="produktoko.php">Produk</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3 px-4"
-                                href="login.php">Masuk Admin</a></li>
                     </ul>
                 </div>
             </div>
@@ -103,7 +101,6 @@
                     <p class="small"><a href="./" class="text-white text-decoration-none">Home</a></p>
                     <p class="small"><a href="produktoko.php" class="text-white text-decoration-none">Semua Produk</a>
                     </p>
-                    <p class="small"><a href="login.php" class="text-white text-decoration-none">Admin Login</a></p>
                 </div>
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold small">Kontak Kami</h5>

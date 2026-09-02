@@ -114,6 +114,17 @@ foreach ($pages as $page) {
         $current_folder = $parts[0] ?? '';
     }
     if ($current_folder) {
+        // A URL yang memakai cleanUrls + trailingSlash memiliki base URL
+        // /[folder]/halaman/. Aset relatif akan salah mengarah ke subfolder halaman.
+        // Gunakan path absolut pada hasil build agar aman di semua URL Vercel.
+        foreach (['bootstrap', 'css', 'js', 'fonts', 'assets'] as $asset_dir) {
+            $content = str_replace('"' . $asset_dir . '/', '"/' . $current_folder . '/' . $asset_dir . '/', $content);
+            $content = str_replace("'" . $asset_dir . "/", "'/" . $current_folder . "/" . $asset_dir . "/", $content);
+        }
+        // Tautan antarkatalog juga harus absolut supaya tidak ikut menempel pada
+        // URL halaman ketika Vercel menambahkan trailing slash.
+        $content = str_replace('href="index.html"', 'href="/' . $current_folder . '/"', $content);
+        $content = str_replace('href="produktoko.html"', 'href="/' . $current_folder . '/produktoko/"', $content);
         // Fix relative paths
         $content = str_replace('"./image/', '"' . "/$current_folder/image/", $content);
         $content = str_replace("'./image/", "'" . "/$current_folder/image/", $content);
