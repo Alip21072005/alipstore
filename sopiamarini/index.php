@@ -109,7 +109,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Kedai Sopia Manis</small>
+            <small>Copyright &copy; 2023 - Kedai Sopia Manis</small>
         </div>
     </footer>
 

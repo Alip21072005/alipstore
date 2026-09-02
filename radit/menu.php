@@ -80,7 +80,7 @@ foreach($kategori as $k){
 </div>
 
 <footer style="background:#f1c40f;text-align:center;padding:15px;margin-top:50px">
-© 2025 Gabutin Coffeshop • Radit Stiawan
+© 2023 Gabutin Coffeshop • Radit Stiawan
 </footer>
 
 </body>

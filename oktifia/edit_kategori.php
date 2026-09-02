@@ -179,7 +179,7 @@
 
     <footer class="bg-white border-top py-4 mt-auto">
         <div class="container text-center text-muted">
-            <small>Copyright &copy; 2025 - <strong>Toko Boneka Oktifia</strong></small>
+            <small>Copyright &copy; 2023 - <strong>Toko Boneka Oktifia</strong></small>
         </div>
     </footer>
 

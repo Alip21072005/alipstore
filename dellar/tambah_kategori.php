@@ -83,7 +83,7 @@
 
     <footer class="fixed-bottom">
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - <strong>Della</strong>. All rights reserved.</small>
+            <small>Copyright &copy; 2023 - <strong>Della</strong>. All rights reserved.</small>
         </div>
     </footer>
 

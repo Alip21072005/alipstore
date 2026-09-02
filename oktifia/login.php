@@ -150,7 +150,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <div class="card-footer bg-light border-top-0 py-3 text-center">
-            <small class="text-muted">&copy; 2025 <strong>Toko Boneka Oktifia</strong></small>
+            <small class="text-muted">&copy; 2023 <strong>Toko Boneka Oktifia</strong></small>
         </div>
     </div>
 

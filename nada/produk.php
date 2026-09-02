@@ -225,7 +225,7 @@
 
     <footer class="py-4">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Management System</strong></small>
+            <small class="text-muted">Copyright &copy; 2023 — <strong>Nada Management System</strong></small>
         </div>
     </footer>
 

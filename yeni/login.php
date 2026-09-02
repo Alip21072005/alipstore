@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="card-footer text-center text-muted">
-                <small>Kedai Kito Online © 2025</small>
+                <small>Kedai Kito Online © 2023</small>
             </div>
         </div>
     </form>

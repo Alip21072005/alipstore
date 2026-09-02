@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) {
         <?php endif; ?>
 
         <div class="footer-text">
-            &copy; 2025 <strong>Yunda Management System</strong><br>
+            &copy; 2023 <strong>Yunda Management System</strong><br>
             All rights reserved.
         </div>
     </div>

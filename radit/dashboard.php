@@ -186,7 +186,7 @@
         </p>
     </div>
     <footer>
-        © 2025 <strong>Gabutin CoffeShop</strong> Drink & Food Management System
+        © 2023 <strong>Gabutin CoffeShop</strong> Drink & Food Management System
     </footer>
 
 </body>

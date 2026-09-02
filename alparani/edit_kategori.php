@@ -93,7 +93,7 @@ $k = dummy_fetch_object($kategori);
         <!--- footer --->
         <footer>
             <div class="mt-5 bg-primary text-light p-3 text-center">
-                <small>Copyright &copy; 2025 - Kedai Kito Online</small>
+                <small>Copyright &copy; 2023 - Kedai Kito Online</small>
             </div>
         </footer>
 

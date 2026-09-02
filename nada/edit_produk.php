@@ -284,7 +284,7 @@ $p = dummy_fetch_object($produk);
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Management Panel</strong></small>
+            <small class="text-muted">Copyright &copy; 2023 — <strong>Nada Management Panel</strong></small>
         </div>
     </footer>
 

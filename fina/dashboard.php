@@ -51,7 +51,7 @@
     <!--- footer --->
     <footer>
         <div class="mt-5 bg-primary text-light p-3 text-center">
-            <small>© 2025 kedai Princess Fina.</small>
+            <small>© 2023 kedai Princess Fina.</small>
         </div>
     </footer>
 

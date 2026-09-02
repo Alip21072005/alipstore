@@ -192,7 +192,7 @@ $daftar_toko = [
 
     <footer class="py-5 text-center">
         <hr class="container mb-4 opacity-10">
-        <p class="mb-0 fw-bold text-muted">© 2025 Program Studi Sistem Informasi</p>
+        <p class="mb-0 fw-bold text-muted">© 2023 Program Studi Sistem Informasi</p>
         <p class="small text-muted">Universitas Dehasen Bengkulu</p>
     </footer>
 

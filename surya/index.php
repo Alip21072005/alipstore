@@ -130,7 +130,7 @@ footer {
 <!-- FOOTER -->
 <footer class="py-4 text-center">
     <small>
-        &copy; 2025 — <b>Tokoh Buah Being Muhammad Online</b><br>
+        &copy; 2023 — <b>Tokoh Buah Being Muhammad Online</b><br>
         Segar • Sehat • Terpercaya
     </small>
 </footer>

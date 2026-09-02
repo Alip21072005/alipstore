@@ -133,7 +133,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Toko Jule Online</small>
+            <small>Copyright &copy; 2023 - Toko Jule Online</small>
         </div>
     </footer>
 

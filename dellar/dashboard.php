@@ -118,7 +118,7 @@
 
     <footer class="bg-white border-top py-3 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 - <strong>Della</strong>. All rights reserved.</small>
+            <small class="text-muted">Copyright &copy; 2023 - <strong>Della</strong>. All rights reserved.</small>
         </div>
     </footer>
 

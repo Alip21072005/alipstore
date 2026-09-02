@@ -164,7 +164,7 @@ body {
     <!-- FOOTER -->
     <footer class="mt-5 text-center text-muted">
         <small>
-            &copy; 2025 — <b>Tokoh Buah Being Muhammad Online</b>
+            &copy; 2023 — <b>Tokoh Buah Being Muhammad Online</b>
         </small>
     </footer>
 

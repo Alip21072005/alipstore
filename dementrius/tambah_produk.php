@@ -164,7 +164,7 @@ if ($_SESSION['status_login'] != true) {
 
     <footer class="py-4">
         <div class="container text-center text-muted small">
-            Copyright &copy; 2025 - <b>Kedai gue Online</b>
+            Copyright &copy; 2023 - <b>Kedai gue Online</b>
         </div>
     </footer>
 

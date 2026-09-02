@@ -84,7 +84,7 @@
             </div>
 
             <div class="card-footer text-center text-muted">
-                <small>Toko Jule Online © 2025</small>
+                <small>Toko Jule Online © 2023</small>
             </div>
         </div>
     </form>

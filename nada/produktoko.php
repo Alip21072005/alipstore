@@ -196,7 +196,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="fw-medium">Copyright &copy; 2025 - <span class="text-white">Nada</span>. All rights
+            <small class="fw-medium">Copyright &copy; 2023 - <span class="text-white">Nada</span>. All rights
                 reserved.</small>
         </div>
     </footer>

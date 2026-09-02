@@ -177,7 +177,7 @@ if (isset($_POST['submit'])) {
 </div>
 
 <footer class="mt-5 text-center text-muted">
-<small>&copy; 2025 — <b>Tokoh Buah Being Muhammad Online</b></small>
+<small>&copy; 2023 — <b>Tokoh Buah Being Muhammad Online</b></small>
 </footer>
 
 </div>

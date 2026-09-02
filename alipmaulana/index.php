@@ -170,7 +170,7 @@
             <hr class="mb-4 bg-white">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p class="small">Copyright &copy; 2025 <strong class="text-warning">Kedai Kito Online</strong>. All
+                    <p class="small">Copyright &copy; 2023 <strong class="text-warning">Kedai Kito Online</strong>. All
                         Rights Reserved.</p>
                 </div>
                 <div class="col-md-5 text-md-end">

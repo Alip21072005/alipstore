@@ -225,7 +225,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small>Copyright &copy; 2025 — <strong>Yunda Management Panel</strong></small>
+            <small>Copyright &copy; 2023 — <strong>Yunda Management Panel</strong></small>
         </div>
     </footer>
 

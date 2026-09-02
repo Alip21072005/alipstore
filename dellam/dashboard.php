@@ -79,7 +79,7 @@ $jml_kategori = dummy_num_rows(dummy_query($conn, "SELECT * FROM kategori"));
 </div>
 
 <footer class="bg-primary text-white text-center py-3">
-    <small>&copy; 2025 Kedai Kito Online</small>
+    <small>&copy; 2023 Kedai Kito Online</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

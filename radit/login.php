@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="login-footer">
-                    © 2025 Radit Shop
+                    © 2023 Radit Shop
                 </div>
 
             </div>

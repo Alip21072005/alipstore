@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="card-footer text-center text-muted">
-                <small>Kedai Sopia Manis © 2025</small>
+                <small>Kedai Sopia Manis © 2023</small>
             </div>
         </div>
     </form>

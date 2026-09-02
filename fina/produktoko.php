@@ -129,7 +129,7 @@ include "koneksi.php";
         <hr class="footer-line">
 
         <div class="text-center footer-copy">
-            © 2025 kedai Princess Fina.
+            © 2023 kedai Princess Fina.
         </div>
     </div>
 </footer>

@@ -191,7 +191,7 @@ include "koneksi.php";
 
 <!-- FOOTER -->
 <footer class="text-center p-3">
-    <small>Copyright &copy; 2025 - Viva La Vida Online</small>
+    <small>Copyright &copy; 2023 - Viva La Vida Online</small>
 </footer>
 
 </body>

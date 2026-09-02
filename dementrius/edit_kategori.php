@@ -110,7 +110,7 @@ $k = dummy_fetch_object($kategori);
 
     <footer class="py-4 mt-5">
         <div class="container text-center text-muted small">
-            Copyright &copy; 2025 - <b>Kedai gue Online</b>. All rights reserved.
+            Copyright &copy; 2023 - <b>Kedai gue Online</b>. All rights reserved.
         </div>
     </footer>
 

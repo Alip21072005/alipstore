@@ -195,7 +195,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 — <strong>Nada Admin Panel</strong>. All rights
+            <small class="text-muted">Copyright &copy; 2023 — <strong>Nada Admin Panel</strong>. All rights
                 reserved.</small>
         </div>
     </footer>

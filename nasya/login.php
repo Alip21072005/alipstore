@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="card-footer text-center text-muted">
-                <small>Nasya Store © 2025</small>
+                <small>Nasya Store © 2023</small>
             </div>
         </div>
     </form>

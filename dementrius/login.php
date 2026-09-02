@@ -173,7 +173,7 @@ if (isset($_POST['submit'])) {
             </form>
 
             <div class="footer-text">
-                &copy; 2025 Kedai gue Online <br> 
+                &copy; 2023 Kedai gue Online <br>
                 <span class="fw-bold text-primary">Admin Control Panel</span>
             </div>
         </div>

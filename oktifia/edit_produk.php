@@ -253,7 +253,7 @@
 
     <footer class="bg-white border-top py-4 text-center text-muted mt-auto">
         <div class="container">
-            <small>&copy; 2025 - <strong>Toko Boneka Oktifia</strong>. Dibuat dengan <i
+            <small>&copy; 2023 - <strong>Toko Boneka Oktifia</strong>. Dibuat dengan <i
                     class="bi bi-heart-fill text-danger"></i></small>
         </div>
     </footer>

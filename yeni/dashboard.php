@@ -105,7 +105,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Kedai Yeni</small>
+            <small>Copyright &copy; 2023 - Kedai Yeni</small>
         </div>
     </footer>
 

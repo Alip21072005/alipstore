@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-12">
                     <p class="mb-1 fw-bold">Najwa Store</p>
-                    <small class="opacity-75">Copyright &copy; 2025 - Semua Hak Dilindungi.</small>
+                    <small class="opacity-75">Copyright &copy; 2023 - Semua Hak Dilindungi.</small>
                 </div>
             </div>
         </div>

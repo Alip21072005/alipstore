@@ -287,7 +287,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small>Copyright &copy; 2025 — <strong>Yunda Management System</strong> 💖</small>
+            <small>Copyright &copy; 2023 — <strong>Yunda Management System</strong> 💖</small>
         </div>
     </footer>
 

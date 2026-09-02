@@ -210,7 +210,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-    © 2025 Gabutin Coffee Shop • Created by Radit Stiawan
+    © 2023 Gabutin Coffee Shop • Created by Radit Stiawan
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

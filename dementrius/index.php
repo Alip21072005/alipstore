@@ -97,7 +97,7 @@
 
     <footer class="text-center">
         <div class="container">
-            <small>Copyright &copy; 2025 - Kedai gue Online</small>
+            <small>Copyright &copy; 2023 - Kedai gue Online</small>
         </div>
     </footer>
 

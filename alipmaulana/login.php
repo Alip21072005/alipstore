@@ -110,7 +110,7 @@
             </form>
         </div>
         <div class="card-footer bg-light border-top-0 py-3 text-center">
-            <small class="text-muted">&copy; 2025 Kedai Kito Online</small>
+            <small class="text-muted">&copy; 2023 Kedai Kito Online</small>
         </div>
     </div>
 

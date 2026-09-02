@@ -71,7 +71,7 @@
     <!--- footer --->
     <footer>
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - Toko Parfum Alpa Online</small>
+            <small>Copyright &copy; 2023 - Toko Parfum Alpa Online</small>
         </div>
     </footer>
 

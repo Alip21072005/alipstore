@@ -134,7 +134,7 @@
 
     <footer class="fixed-bottom bg-white border-top">
         <div class="p-3 text-center">
-            <small class="text-muted">Copyright &copy; 2025 - <strong>Toko Rafi</strong></small>
+            <small class="text-muted">Copyright &copy; 2023 - <strong>Toko Rafi</strong></small>
         </div>
     </footer>
 

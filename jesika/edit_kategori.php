@@ -93,7 +93,7 @@ $k = dummy_fetch_object($kategori);
         <!--- footer --->
         <footer>
             <div class="mt-5 bg-primary text-light p-3 text-center">
-                <small>Copyright &copy; 2025 - toko jule Online</small>
+                <small>Copyright &copy; 2023 - toko jule Online</small>
             </div>
         </footer>
 

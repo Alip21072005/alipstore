@@ -71,7 +71,7 @@ if (dummy_num_rows($produk) > 0) {
     <!--- footer --->
     <footer>
         <div class="mt-5 p-3 text-center footer">
-            <small>Copyright &copy; 2025 - goblin store mpruy</small>
+            <small>Copyright &copy; 2023 - goblin store mpruy</small>
         </div>
     </footer>
 

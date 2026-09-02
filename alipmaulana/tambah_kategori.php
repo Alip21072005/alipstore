@@ -136,7 +136,7 @@
 
     <footer class="bg-white border-top py-4 mt-auto shadow-sm">
         <div class="container text-center text-muted">
-            <small>Copyright &copy; 2025 - <strong>Kedai Kito Online</strong></small>
+            <small>Copyright &copy; 2023 - <strong>Kedai Kito Online</strong></small>
         </div>
     </footer>
 

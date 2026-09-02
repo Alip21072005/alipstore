@@ -109,7 +109,7 @@
         </form>
 
         <div class="footer-text">
-            &copy; 2025 Nada Store System. All rights reserved.
+            &copy; 2023 Nada Store System. All rights reserved.
         </div>
     </div>
 

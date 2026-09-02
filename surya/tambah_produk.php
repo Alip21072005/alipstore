@@ -193,7 +193,7 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
 <!-- ===== FOOTER ===== -->
 <footer class="bg-primary text-light py-3 mt-5">
     <div class="container text-center">
-        <small>&copy; 2025 — <strong>Tokoh Buah Being Muhammad Online</strong></small>
+        <small>&copy; 2023 — <strong>Tokoh Buah Being Muhammad Online</strong></small>
     </div>
 </footer>
 

@@ -216,7 +216,7 @@
 
     <footer class="py-4 mt-auto">
         <div class="container text-center">
-            <small>Copyright &copy; 2025 — <strong>Yunda Management System</strong>. All rights reserved.</small>
+            <small>Copyright &copy; 2023 — <strong>Yunda Management System</strong>. All rights reserved.</small>
         </div>
     </footer>
 

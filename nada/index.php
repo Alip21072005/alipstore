@@ -183,7 +183,7 @@
             <div class="row">
                 <div class="col-12">
                     <h4 class="fw-bold mb-3">NADA</h4>
-                    <p class="opacity-50 small mb-0">Copyright &copy; 2025 - All Rights Reserved.</p>
+                    <p class="opacity-50 small mb-0">Copyright &copy; 2023 - All Rights Reserved.</p>
                 </div>
             </div>
         </div>

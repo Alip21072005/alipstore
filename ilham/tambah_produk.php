@@ -157,7 +157,7 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     </div>
 
     <footer class="bg-primary text-light p-3 text-center fixed-bottom">
-        <small>Copyright &copy; 2025 - Kedai Kito Online</small>
+        <small>Copyright &copy; 2023 - Kedai Kito Online</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

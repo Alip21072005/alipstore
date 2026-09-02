@@ -290,7 +290,7 @@
         </div>
 
         <div class="footer-bottom">
-            <small>© 2025 Viva La Vida Online. Princess Fella Yang Cantik.</small>
+            <small>© 2023 Viva La Vida Online. Princess Fella Yang Cantik.</small>
         </div>
     </footer>
 

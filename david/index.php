@@ -82,7 +82,7 @@
     <!-- Footer -->
     <footer>
         <div class="bg-primary text-light p-3 text-center">
-            <small>&copy; 2025 - Kedai Kito Online</small>
+            <small>&copy; 2023 - Kedai Kito Online</small>
         </div>
     </footer>
 

@@ -124,7 +124,7 @@ $total_produk = dummy_num_rows($query_produk);
 
     <footer class="bg-white border-top py-4 shadow-sm">
         <div class="container text-center">
-            <small class="text-muted">Copyright &copy; 2025 - <strong>Kedai Kito Online</strong>. All rights
+            <small class="text-muted">Copyright &copy; 2023 - <strong>Kedai Kito Online</strong>. All rights
                 reserved.</small>
         </div>
     </footer>

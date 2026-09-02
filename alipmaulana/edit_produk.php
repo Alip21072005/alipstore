@@ -210,7 +210,7 @@ $p = dummy_fetch_object($produk);
     </main>
 
     <footer class="bg-white border-top py-4 text-center text-muted mt-auto">
-        <small>&copy; 2025 - <strong>Kedai Kito Online</strong></small>
+        <small>&copy; 2023 - <strong>Kedai Kito Online</strong></small>
     </footer>
 
     <script>

@@ -134,7 +134,7 @@
 
     <footer class="fixed-bottom bg-white border-top">
         <div class="p-3 text-center">
-            <small class="text-muted">Copyright &copy; 2025 - <strong>Najwa Store</strong></small>
+            <small class="text-muted">Copyright &copy; 2023 - <strong>Najwa Store</strong></small>
         </div>
     </footer>
 

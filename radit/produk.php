@@ -107,7 +107,7 @@ include "koneksi.php";
     <!--- footer --->
     <footer>
         <div class="mt-5 bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - GAbutin coffeshop</small>
+            <small>Copyright &copy; 2023 - GAbutin coffeshop</small>
         </div>
     </footer>
 

@@ -158,7 +158,7 @@
 
     <footer>
         <div class="bg-primary text-light p-3 text-center">
-            <small>Copyright &copy; 2025 - <strong>Najwa Store</strong>. All rights reserved.</small>
+            <small>Copyright &copy; 2023 - <strong>Najwa Store</strong>. All rights reserved.</small>
         </div>
     </footer>
 

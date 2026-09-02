@@ -203,7 +203,7 @@
 
     <footer class="bg-white border-top py-4">
         <div class="container text-center text-muted">
-            <small>&copy; 2025 - <strong>Kedai Kito Online</strong></small>
+            <small>&copy; 2023 - <strong>Kedai Kito Online</strong></small>
         </div>
     </footer>
 

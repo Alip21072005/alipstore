@@ -150,7 +150,7 @@ include "koneksi.php";
 
     <!-- ===== FOOTER ===== -->
     <footer class="bg-primary text-light text-center py-3">
-        <small>Copyright &copy; 2025 - Gabutin CoffeShop</small>
+        <small>Copyright &copy; 2023 - Gabutin CoffeShop</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

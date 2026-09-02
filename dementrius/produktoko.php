@@ -113,7 +113,7 @@ include "koneksi.php";
 
     <footer class="py-4 mt-5">
         <div class="container text-center text-muted">
-            <small>Copyright &copy; 2025 - <b>Kedai gue Online</b>. All rights reserved.</small>
+            <small>Copyright &copy; 2023 - <b>Kedai gue Online</b>. All rights reserved.</small>
         </div>
     </footer>
 
